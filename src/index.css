@@ -19,7 +19,7 @@ html {
   direction: rtl;
 }
 body {
-  padding: 0 1rem;
+  width: 100vw;
   font-family: "vazir";
   background-color: #f3f4f6;
 }
