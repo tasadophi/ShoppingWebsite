@@ -7,8 +7,10 @@ import {
   BiX,
 } from "react-icons/bi";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate();
   const initial = {
     digital: false,
     clothes: false,
@@ -22,10 +24,12 @@ const Header = () => {
   const showMenuHandler = () => setShowMenu(true);
   const closeMenuHandler = () => setShowMenu(false);
   const showSubHandler = (property) =>
-    setShowSub({
-      ...initial,
-      [property]: !showSub[property],
-    });
+    window.innerWidth < 1024
+      ? setShowSub({
+          ...initial,
+          [property]: !showSub[property],
+        })
+      : navigate("/digital");
 
   const arrow = () => {
     return showSub.digital ? (
