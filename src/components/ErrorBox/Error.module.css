@@ -1,0 +1,35 @@
+.errorBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ef4444;
+  margin-top: 3rem;
+}
+
+.errorBox p {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  gap: 2rem;
+  align-items: center;
+}
+
+.errorBox button {
+  width: fit-content;
+  outline: none;
+  border: 1px solid #444;
+  color: #444;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .errorBox{
+      font-size: 3rem;
+      padding: 3rem 5rem;
+  }
+}
