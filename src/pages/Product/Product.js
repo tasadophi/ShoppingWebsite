@@ -15,12 +15,12 @@ const Product = () => {
     (state) => state.products
   );
 
-  useEffect(() => {
+  if (products.length) {
     const productName = products.find(
       (p) => parseInt(p.id) === parseInt(productId)
     ).name;
     document.title = productName;
-  }, [productId]);
+  }
 
   const inCart = (product) => {
     return cart.some((p) => parseInt(p.id) === parseInt(product.id));
