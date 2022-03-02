@@ -21,22 +21,36 @@ const Header = () => {
   };
   const [showSub, setShowSub] = useState(initial);
 
-  const showMenuHandler = () => setShowMenu(true);
-  const closeMenuHandler = () => setShowMenu(false);
+  const showMenuHandler = () => {
+    setShowMenu(true);
+    document.querySelector("body").style.overflow = "hidden";
+  };
+
+  const closeMenuHandler = () => {
+    setShowMenu(false);
+    document.querySelector("body").style = null;
+  };
+
   const showSubHandler = (property) =>
     window.innerWidth < 1024
       ? setShowSub({
           ...initial,
           [property]: !showSub[property],
         })
-      : navigate("/digital");
+      : navigate(`/products/${property}`);
 
-  const arrow = () => {
-    return showSub.digital ? (
+  const arrow = (type) => {
+    return showSub[type] ? (
       <BiUpArrowAlt className={style.hidden} />
     ) : (
       <BiDownArrowAlt className={style.hidden} />
     );
+  };
+
+  const changeRoute = (route) => {
+    setShowMenu(false);
+    setShowSub(initial);
+    navigate("/products/" + route);
   };
 
   return (
@@ -70,18 +84,49 @@ const Header = () => {
               onClick={() => showSubHandler("digital")}
             >
               کالای دیجیتال
-              {arrow()}
+              {arrow("digital")}
             </span>
             <ul
               className={`${style.hide} ${
                 showSub.digital ? style.subMenu : ""
               }`}
             >
-              <li className={style.subMenuItem}>گوشی موبایل</li>
-              <li className={style.subMenuItem}>لپتاپ</li>
-              <li className={style.subMenuItem}>تبلت</li>
-              <li className={style.subMenuItem}>دوربین</li>
-              <li className={style.subMenuItem}>هدفون و هندزفری</li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("digital")}
+              >
+                همه محصولات
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("digital/mobiles")}
+              >
+                گوشی موبایل
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("digital/laptops")}
+              >
+                لپتاپ
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("digital/tablets")}
+              >
+                تبلت
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("digital/cameras")}
+              >
+                دوربین
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("digital/headphones")}
+              >
+                هدفون و هندزفری
+              </li>
             </ul>
           </li>
           <li className={style.menuItem}>
@@ -90,16 +135,37 @@ const Header = () => {
               onClick={() => showSubHandler("clothes")}
             >
               مد و پوشاک
-              {arrow()}
+              {arrow("clothes")}
             </span>
             <ul
               className={`${style.hide} ${
                 showSub.clothes ? style.subMenu : ""
               }`}
             >
-              <li className={style.subMenuItem}>مردانه</li>
-              <li className={style.subMenuItem}>زنانه</li>
-              <li className={style.subMenuItem}>بچه گانه</li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("clothes")}
+              >
+                همه محصولات
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("clothes/men")}
+              >
+                مردانه
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("clothes/women")}
+              >
+                زنانه
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("clothes/children")}
+              >
+                بچه گانه
+              </li>
             </ul>
           </li>
           <li className={style.menuItem}>
@@ -108,16 +174,47 @@ const Header = () => {
               onClick={() => showSubHandler("toys")}
             >
               اسباب بازی
-              {arrow()}
+              {arrow("toys")}
             </span>
             <ul
               className={`${style.hide} ${showSub.toys ? style.subMenu : ""}`}
             >
-              <li className={style.subMenuItem}>فکری آموزشی</li>
-              <li className={style.subMenuItem}>لگو و ساختنی</li>
-              <li className={style.subMenuItem}>عروسک و فیگور</li>
-              <li className={style.subMenuItem}>اسپینر و سرگرمی</li>
-              <li className={style.subMenuItem}>تفنگ</li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("toys")}
+              >
+                همه محصولات
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("toys/fekri")}
+              >
+                فکری آموزشی
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("toys/logo")}
+              >
+                لگو و ساختنی
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("toys/figure")}
+              >
+                عروسک و فیگور
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("toys/speener")}
+              >
+                اسپینر و سرگرمی
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("toys/gun")}
+              >
+                تفنگ
+              </li>
             </ul>
           </li>
           <li className={style.menuItem}>
@@ -126,14 +223,35 @@ const Header = () => {
               onClick={() => showSubHandler("health")}
             >
               زیبایی و سلامت
-              {arrow()}
+              {arrow("health")}
             </span>
             <ul
               className={`${style.hide} ${showSub.health ? style.subMenu : ""}`}
             >
-              <li className={style.subMenuItem}>لوازم آرایشی</li>
-              <li className={style.subMenuItem}>لوازم بهداشتی</li>
-              <li className={style.subMenuItem}>طلا و زیورآلات زنانه</li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("health")}
+              >
+                همه محصولات
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("health/arayeshi")}
+              >
+                لوازم آرایشی
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("health/behdashti")}
+              >
+                لوازم بهداشتی
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("health/gold")}
+              >
+                طلا و زیورآلات زنانه
+              </li>
             </ul>
           </li>
           <li className={style.menuItem}>
@@ -142,14 +260,35 @@ const Header = () => {
               onClick={() => showSubHandler("book")}
             >
               کتاب
-              {arrow()}
+              {arrow("book")}
             </span>
             <ul
               className={`${style.hide} ${showSub.book ? style.subMenu : ""}`}
             >
-              <li className={style.subMenuItem}>کتاب چاپی</li>
-              <li className={style.subMenuItem}>کتاب صوتی</li>
-              <li className={style.subMenuItem}>مجلات داخلی و خارجی</li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("book")}
+              >
+                همه محصولات
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("book/ketab-chapi")}
+              >
+                کتاب چاپی
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("book/ketab-soti")}
+              >
+                کتاب صوتی
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("book/majalat")}
+              >
+                مجلات داخلی و خارجی
+              </li>
             </ul>
           </li>
           <li className={style.menuItem}>
@@ -158,12 +297,33 @@ const Header = () => {
               onClick={() => showSubHandler("car")}
             >
               لوازم خودرو
-              {arrow()}
+              {arrow("car")}
             </span>
             <ul className={`${style.hide} ${showSub.car ? style.subMenu : ""}`}>
-              <li className={style.subMenuItem}>لوازم جانبی</li>
-              <li className={style.subMenuItem}>لوازم یدکی</li>
-              <li className={style.subMenuItem}>لوازم مصرفی</li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("car")}
+              >
+                همه محصولات
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("car/janebi")}
+              >
+                لوازم جانبی
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("car/yadaki")}
+              >
+                لوازم یدکی
+              </li>
+              <li
+                className={style.subMenuItem}
+                onClick={() => changeRoute("car/masrafi")}
+              >
+                لوازم مصرفی
+              </li>
             </ul>
           </li>
         </ul>
