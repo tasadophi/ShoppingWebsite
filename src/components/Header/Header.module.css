@@ -137,7 +137,6 @@
   height: 0;
   transition: padding-top 0.3s, height 0.3s;
   overflow: hidden;
-  z-index: 99;
 }
 
 .active {

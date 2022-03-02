@@ -37,7 +37,7 @@ const Header = () => {
           ...initial,
           [property]: !showSub[property],
         })
-      : navigate(`/products/${property}`);
+      : false;
 
   const arrow = (type) => {
     return showSub[type] ? (
