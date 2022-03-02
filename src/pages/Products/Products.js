@@ -14,8 +14,40 @@ const Products = () => {
   const [showSub, setShowSub] = useState(null);
 
   useEffect(() => {
-    setShowFilters(false);
-  }, [group]);
+    const titles = {
+      digital: "کالای دیجیتال",
+      clothes: "مد و پوشاک",
+      toys: "اسباب بازی",
+      health: "زیبایی و سلامت",
+      book: "کتاب",
+      car: "لوازم خودرو",
+      mobiles: "گوشی موبایل",
+      laptops: "لپتاپ",
+      tablets: "تبلت",
+      cameras: "دوربین",
+      headphones: "هدفون",
+      men: "مردانه",
+      women: "زنانه",
+      children: "بچگانه",
+      fekri: "فکری و آموزشی",
+      logo: "لگو و ساختنی",
+      figure: "عروسک و فیگور",
+      speener: "اسپینر و سرگرمی",
+      gun: "تفنگ",
+      arayeshi: "لوازم آرایشی",
+      behdashti: "لوازم بهداشتی",
+      gold: "طلا و زیورآلات زنانه",
+      "ketab-chapi": "کتاب چاپی",
+      "ketab-soti": "کتاب صوتی",
+      majalat: "مجلات",
+      janebi: "لوازم جانبی",
+      yadaki: "لوازم یدکی",
+      masrafi: "لوازم مصرفی",
+    };
+    category
+      ? (document.title = titles[category])
+      : (document.title = titles[group]);
+  }, [group, category]);
 
   // handlers
   const showFiltersHandler = () => {
