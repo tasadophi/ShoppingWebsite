@@ -12,16 +12,6 @@ const Products = () => {
   const { products, loading, error } = useSelector((state) => state.products);
   const [showFilters, setShowFilters] = useState(false);
   const [showSub, setShowSub] = useState(null);
-  // const filterGroup = [
-  //   "digital",
-  //   "clothes",
-  //   "toys",
-  //   "health",
-  //   "book",
-  //   "car",
-  // ].includes(group)
-  //   ? "group"
-  //   : "category";
 
   useEffect(() => {
     setShowFilters(false);
