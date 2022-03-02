@@ -4,12 +4,20 @@ import Loading from "../../components/Loading/Loading";
 import ErrorBox from "../../components/ErrorBox/ErrorBox";
 import { useNavigate, useParams } from "react-router-dom";
 import sepratePrice from "../../utils/sepratePrice";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import {
+  deleteFilters,
+  filterProducts,
+  setFilters,
+} from "../../redux/productsSlice";
 
 const Products = () => {
   const { group, category } = useParams();
-  const { products, loading, error } = useSelector((state) => state.products);
+  const { allProducts, products, loading, error } = useSelector(
+    (state) => state.products
+  );
+  const dispatch = useDispatch();
   const [showFilters, setShowFilters] = useState(false);
   const [showSub, setShowSub] = useState(null);
 
@@ -47,6 +55,7 @@ const Products = () => {
     category
       ? (document.title = titles[category])
       : (document.title = titles[group]);
+    dispatch(deleteFilters());
   }, [group, category]);
 
   // handlers
@@ -103,6 +112,20 @@ const Products = () => {
       })
     );
     const filterKeys = Object.keys(filtersObject);
+
+    // handlers
+    const filterHandler = (e, type, value) => {
+      dispatch(
+        filterProducts({
+          type,
+          value,
+          id: e.target.id,
+          checked: e.target.checked,
+          category,
+        })
+      );
+    };
+
     return (
       <>
         <ul
@@ -133,7 +156,13 @@ const Products = () => {
                 >
                   {filtersObject[filterKey].values.map((filterValue, index) => (
                     <li key={index} className={style.subFilterItem}>
-                      <input id={filterValue + filterKey} type="checkbox" />
+                      <input
+                        id={filterValue + filterKey}
+                        type="checkbox"
+                        onChange={(e) =>
+                          filterHandler(e, filterKey, filterValue)
+                        }
+                      />
                       <label htmlFor={filterValue + filterKey}>
                         {filterValue} {filtersObject[filterKey].unit}
                       </label>
@@ -151,6 +180,9 @@ const Products = () => {
   if (error) return <ErrorBox error={error} />;
   if (products.length) {
     const filteredProducts = products.filter((product) =>
+      category ? product.category === category : product.group === group
+    );
+    const filters = allProducts.filter((product) =>
       category ? product.category === category : product.group === group
     );
     return (
@@ -171,7 +203,7 @@ const Products = () => {
                 فیلتر
                 <BiFilter />
               </span>
-              {filteredProducts.length && filterPage(filteredProducts)}
+              {filteredProducts.length && filterPage(filters)}
             </div>
           )}
           <div className={style.productsContainer}>
