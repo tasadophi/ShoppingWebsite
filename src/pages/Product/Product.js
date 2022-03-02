@@ -1,41 +1,108 @@
 import { BiShoppingBag } from "react-icons/bi";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import ErrorBox from "../../components/ErrorBox/ErrorBox";
 import Loading from "../../components/Loading/Loading";
-import separatePrice from "../../utils/sepratePrice";
+import { addProduct } from "../../redux/productsSlice";
+import sepratePrice from "../../utils/sepratePrice";
 import style from "./Product.module.css";
 
 const Product = () => {
-  const { group, productId } = useParams();
-  const { products, loading, error } = useSelector((state) => state.products);
+  const { group, category, productId } = useParams();
+  const dispatch = useDispatch();
+  const { products, cart, loading, error } = useSelector(
+    (state) => state.products
+  );
+  const inCart = (product) => {
+    return cart.some((p) => parseInt(p.id) === parseInt(product.id));
+  };
+
+  // handlers
+  const addToCart = (product) => {
+    dispatch(addProduct(product));
+  };
+
   if (loading) return <Loading />;
   if (error) return <ErrorBox error={error} />;
   if (products.length) {
     const product = products.find(
-      (p) => p.group === group && p.id === parseInt(productId)
+      (p) =>
+        p.category === category &&
+        p.group === group &&
+        p.id === parseInt(productId)
     );
+    const offPrice = () => {
+      const offPercent =
+        100 - Math.floor((100 * product.offPrice) / product.price);
+      return (
+        <div className={style.priceContainer}>
+          <span className={style.mainPrice}>
+            {sepratePrice(product.price)} تومن
+          </span>
+          <span className={style.offPrice}>
+            {sepratePrice(product.offPrice)} تومن
+            <span className={style.badge}>{offPercent}%</span>
+          </span>
+        </div>
+      );
+    };
     return (
       <section className={style.product}>
         <div className="container">
-          <div className={style.imgContainer}>
-            <img src={product.image} alt={product.name} />
-          </div>
-          <div className={style.description}>
-            <div className={style.seller}>
-              <span>
-                <BiShoppingBag />
-                فروشنده: علی
-              </span>
-              <span className={style.seller}>عملکرد: عالی</span>
+          <div className={style.main}>
+            <div className={style.imgContainer}>
+              <img src={product.image} alt={product.name} />
             </div>
-            <div className={style.detail}>
-              <span className={style.available}>موجود در انبار</span>
-              <span className={style.price}>
-                {separatePrice(product.price)} تومن
-              </span>
+            <div className={style.description}>
+              <div className={style.seller}>
+                <span>
+                  <BiShoppingBag />
+                  فروشنده: علی
+                </span>
+                <span className={style.seller}>عملکرد: عالی</span>
+              </div>
+              <div className={style.detail}>
+                {product.available ? (
+                  <>
+                    <span className={style.available}>موجود در انبار</span>
+                    {product.offPrice === product.price ? (
+                      <span className={style.priceContainer}>
+                        {sepratePrice(product.price)} تومن
+                      </span>
+                    ) : (
+                      offPrice()
+                    )}
+                  </>
+                ) : (
+                  <span className={style.unavailable}>ناموجود</span>
+                )}
+              </div>
+              {product.available ? (
+                inCart(product) ? (
+                  <button className={style.btn}>ادامه خرید</button>
+                ) : (
+                  <button
+                    className={style.btn}
+                    onClick={() => addToCart(product)}
+                  >
+                    افزودن به سبد خرید
+                  </button>
+                )
+              ) : (
+                <button className={style.btn}>موجود شد اطلاع بده</button>
+              )}
             </div>
           </div>
+          <ul className={style.specifications}>
+            {product.specifications.map((specification, index) => (
+              <li key={index}>
+                <span>{specification.name}</span>
+                <span>
+                  {specification.value} {specification.unit}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     );
