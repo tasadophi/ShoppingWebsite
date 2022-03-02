@@ -14,14 +14,18 @@ function App() {
   useEffect(() => {
     dispatch(getDataApi());
   }, []);
-  
+
   return (
     <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/products">
           <Route path="/products/:group" element={<Products />} />
-          <Route path="/products/:group/:productId" element={<Product />} />
+          <Route path="/products/:group/:category" element={<Products />} />
+          <Route
+            path="/products/:group/:category/:productId"
+            element={<Product />}
+          />
         </Route>
       </Routes>
     </Layout>
