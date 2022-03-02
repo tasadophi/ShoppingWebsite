@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BiShoppingBag } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -13,6 +14,14 @@ const Product = () => {
   const { products, cart, loading, error } = useSelector(
     (state) => state.products
   );
+
+  useEffect(() => {
+    const productName = products.find(
+      (p) => parseInt(p.id) === parseInt(productId)
+    ).name;
+    document.title = productName;
+  }, [productId]);
+
   const inCart = (product) => {
     return cart.some((p) => parseInt(p.id) === parseInt(product.id));
   };
