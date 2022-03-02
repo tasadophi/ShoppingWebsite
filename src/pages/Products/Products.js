@@ -124,22 +124,24 @@ const Products = () => {
     return (
       <section className={style.products}>
         <div className="container">
-          <div
-            className={`${style.filters} ${showFilters && style.showFilters}`}
-            onClick={
-              showFilters
-                ? hideFiltersHandler
-                : (e) => {
-                    e.preventDefault();
-                  }
-            }
-          >
-            <span className={style.filterTitle} onClick={showFiltersHandler}>
-              فیلتر
-              <BiFilter />
-            </span>
-            {filteredProducts.length && filterPage(filteredProducts)}
-          </div>
+          {category && (
+            <div
+              className={`${style.filters} ${showFilters && style.showFilters}`}
+              onClick={
+                showFilters
+                  ? hideFiltersHandler
+                  : (e) => {
+                      e.preventDefault();
+                    }
+              }
+            >
+              <span className={style.filterTitle} onClick={showFiltersHandler}>
+                فیلتر
+                <BiFilter />
+              </span>
+              {filteredProducts.length && filterPage(filteredProducts)}
+            </div>
+          )}
           <div className={style.productsContainer}>
             {filteredProducts.map((product) => (
               <Product key={product.id} product={product} />
