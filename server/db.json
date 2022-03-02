@@ -5,15 +5,44 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "samsung",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 256,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 12,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "value": 108,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 5000,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "سامسونگ مدل S21 Ultra",
       "colors": ["مشکی", "سفید"],
-      "storage": 256,
-      "ram": 12,
-      "camera": 108,
-      "simCount": 2,
-      "android": 11,
-      "battery": 5000,
       "price": 30799000,
+      "offPrice": 30299900,
       "image": "https://dkstatics-public.digikala.com/digikala-products/62c8a2c6d57dce6efbde8bbd348490c2f10a55e1_1611742801.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     },
     {
@@ -21,15 +50,44 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "samsung",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 256,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 8,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "value": 64,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 4500,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "سامسونگ مدل A52s",
       "colors": ["سفید", "سبز", "بنفش"],
-      "storage": 256,
-      "ram": 8,
-      "camera": 64,
-      "simCount": 2,
-      "android": 11,
-      "battery": 4500,
       "price": 9729000,
+      "offPrice": 9729000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/8a499b9702b546cdcd882c72dab527b95924a4b5_1630926554.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     },
     {
@@ -37,15 +95,44 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "samsung",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 256,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 8,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "value": 12,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 3300,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "سامسونگ مدل ZFlip3",
       "colors": ["مشکی", "سبز تیره"],
-      "storage": 256,
-      "ram": 8,
-      "camera": 12,
-      "simCount": 2,
-      "android": 11,
-      "battery": 3300,
       "price": 21499000,
+      "offPrice": 21499000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/04602d80ad8ad70023940593af9139864f1343eb_1628686556.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     },
     {
@@ -53,15 +140,44 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "samsung",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 32,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 3,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "value": 13,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 5000,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "سامسونگ مدل A03s",
       "colors": ["مشکی", "سفید", "آبی"],
-      "storage": 32,
-      "ram": 3,
-      "camera": 13,
-      "simCount": 2,
-      "android": 11,
-      "battery": 5000,
       "price": 3439000,
+      "offPrice": 3439000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/2c9e700be94169ab950f8a6a59194a71f4d0fe62_1631008504.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     },
     {
@@ -69,15 +185,44 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "samsung",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 128,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 8,
+          "unit": "گیگابایت",
+          "filter": "ran"
+        },
+        {
+          "name": "دوربین",
+          "value": 12,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 10, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 4500,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "سامسونگ مدل S20 FE",
       "colors": ["سبز", "سرمه ای", "نارنجی", "یاسی"],
-      "storage": 128,
-      "ram": 8,
-      "camera": 12,
-      "simCount": 2,
-      "android": 10,
-      "battery": 4500,
       "price": 11610000,
+      "offPrice": 11610000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/2e16bad7f6ea176ae6502406d7342afe9982fbf7_1615294432.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     },
     {
@@ -85,15 +230,44 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "samsung",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 256,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 8,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "value": 12,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 12, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 4500,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "سامسونگ مدل S21 FE",
       "colors": ["مشکی", "سفید", "خاکستری"],
-      "storage": 256,
-      "ram": 8,
-      "camera": 12,
-      "simCount": 2,
-      "android": 12,
-      "battery": 4500,
       "price": 17099000,
+      "offPrice": 17099000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/cdc4537576a85fc3c57924fa0430219d361e8cbc_1641484314.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     },
     {
@@ -101,15 +275,44 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "xiaomi",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 256,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 8,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "value": 48,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 5160,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "شیائومی مدل Poco X3 Pro",
       "colors": ["مشکی", "طلایی", "آبی"],
-      "storage": 256,
-      "ram": 8,
-      "camera": 48,
-      "simCount": 2,
-      "android": 11,
-      "battery": 5160,
       "price": 6899000,
+      "offPrice": 6899000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/caa4e7d9543637cf8921b67f26803827c864e269_1618918880.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     },
     {
@@ -117,15 +320,44 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "xiaomi",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 256,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 8,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "value": 48,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 4520,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "شیائومی مدل Poco F3",
       "colors": ["مشکی", "سفید", "آبی"],
-      "storage": 256,
-      "ram": 8,
-      "camera": 48,
-      "simCount": 2,
-      "android": 11,
-      "battery": 4520,
       "price": 8719000,
+      "offPrice": 8719000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/1cd452a648ec0c1c723139c099e0367c9a190f1f_1626177846.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     },
     {
@@ -133,15 +365,44 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "xiaomi",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 128,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 8,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "value": 64,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 5000,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "شیائومی مدل Poco X3 GT",
       "colors": ["مشکی", "سفید", "آبی"],
-      "storage": 128,
-      "ram": 8,
-      "camera": 64,
-      "simCount": 2,
-      "android": 11,
-      "battery": 5000,
       "price": 6666000,
+      "offPrice": 6666000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/8acd8cbc9ab1d149f5dd05fb049a4f5b604e1346_1632317232.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     },
     {
@@ -149,15 +410,44 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "xiaomi",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 256,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 8,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "value": 64,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 4250,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "شیائومی مدل 11 Lite NE",
       "colors": ["مشکی", "سفید", "آبی"],
-      "storage": 256,
-      "ram": 8,
-      "camera": 64,
-      "simCount": 2,
-      "android": 11,
-      "battery": 4250,
       "price": 7599000,
+      "offPrice": 7599000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/48d096c27b9216462210930ca6236648da3d9984_1636891836.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     },
     {
@@ -165,15 +455,44 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "xiaomi",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 256,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 4,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "value": 48,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 10, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 6000,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "شیائومی مدل Poco M3",
       "colors": ["آبی"],
-      "storage": 256,
-      "ram": 4,
-      "camera": 48,
-      "simCount": 2,
-      "android": 10,
-      "battery": 6000,
       "price": 5090000,
+      "offPrice": 5090000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/d3782b5e4f00e1427c6969c04c3d26a04808a377_1609659378.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     },
     {
@@ -181,16 +500,92 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "xiaomi",
+      "specifications": [
+        {
+          "name": "تعداد سیمکارت",
+          "value": 2,
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 128,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 6,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "value": 108,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "باتری",
+          "value": 5020,
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
+      "available": true,
       "name": "شیائومی مدل Redmi Note 10 Pro Max",
       "colors": ["مشکی", "طلایی", "آبی"],
-      "storage": 128,
-      "ram": 6,
-      "camera": 108,
-      "simCount": 2,
-      "android": 11,
-      "battery": 5020,
       "price": 7199000,
+      "offPrice": 7199000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/3049dd8c073305e494f86d2959ac679febba7467_1630738402.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 13,
+      "group": "digital",
+      "category": "laptops",
+      "brand": "asus",
+      "specifications": [
+        {
+          "name": "سازنده پردازنده",
+          "value": "Intel",
+          "filter": "cpuCreator"
+        },
+        {
+          "name": "سری پردازنده",
+          "value": "Celeron",
+          "filter": "cpuSeries"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 4,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "نوع حافظه رم",
+          "value": "DDR4",
+          "filter": "ramType"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 1,
+          "unit": "ترابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "نوع حافظه داخلی",
+          "value": "هارددیسک",
+          "filter": "romType"
+        }
+      ],
+      "available": true,
+      "name": "لپتاپ ایسوس مدل X543MA-DM1098",
+      "colors": ["سرمه ای"],
+      "price": 8899000,
+      "offPrice": 8599000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/1e3d79f8828bca979e47cae3e505b0a9ca602dd8_1637394809.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     }
-  ]
+  ],
+  "filters": []
 }
