@@ -1,4 +1,4 @@
-const separatePrice = (number) => {
+const sepratePrice = (number) => {
   number += "";
   number = number.replace(",", "");
   let x = number.split(".");
@@ -9,4 +9,4 @@ const separatePrice = (number) => {
   return y + z;
 };
 
-export default separatePrice;
+export default sepratePrice;
