@@ -19,7 +19,7 @@ let initialState = {
   allProducts: [],
   loading: false,
   cart: [],
-  filters: [],
+  filters: {},
 };
 
 const productSlice = createSlice({
@@ -30,32 +30,48 @@ const productSlice = createSlice({
       state.cart.push(action.payload);
     },
     deleteFilters: (state) => {
-      state.filters = [];
+      state.filters = {};
       state.products = state.allProducts;
     },
     filterProducts: (state, action) => {
       const payload = action.payload;
-      if (payload.checked) state.filters.push(payload);
-      else
-        state.filters = state.filters.filter(
-          (filter) => filter.id !== payload.id
+      if (payload.checked)
+        state.filters.hasOwnProperty(payload.type)
+          ? state.filters[payload.type].push(payload.value)
+          : (state.filters[payload.type] = [payload.value]);
+      else {
+        const newFilters = state.filters[payload.type].filter(
+          (filterValue) => filterValue !== payload.value
         );
+        newFilters.length
+          ? (state.filters[payload.type] = newFilters)
+          : delete state.filters[payload.type];
+      }
       const filteredProducts = state.allProducts.filter(
         (product) => product.category === payload.category
       );
       const products = [];
+      const filterKeys = Object.keys(state.filters);
       filteredProducts.forEach((p) => {
+        const productFilter = {};
         const specifications = p.specifications;
-        state.filters.forEach((filter) => {
-          specifications.forEach((s) => {
-            if (s.filter === filter.type && s.value === filter.value) {
-              products.push(p);
+        specifications.forEach((s) => {
+          filterKeys.forEach((filterKey) => {
+            if (
+              s.filter === filterKey &&
+              state.filters[filterKey].includes(s.value)
+            ) {
+              productFilter[filterKey] = true;
             }
           });
+          if (Object.keys(productFilter).length === filterKeys.length)
+            products.push(p);
         });
       });
       products.length
         ? (state.products = [...new Set(products)])
+        : filterKeys.length
+        ? (state.products = ["false"])
         : (state.products = state.allProducts);
     },
   },
