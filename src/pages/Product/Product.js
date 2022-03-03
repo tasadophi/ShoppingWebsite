@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { BiShoppingBag } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
