@@ -204,6 +204,17 @@
   cursor: pointer;
 }
 
+.noProduct {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 2rem;
+  gap: 1rem;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
 @media screen and (min-width: 1024px) {
   .filters .filterList {
     width: 40%;

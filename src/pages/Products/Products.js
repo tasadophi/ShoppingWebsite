@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 import {
   deleteFilters,
   filterProducts,
-  setFilters,
 } from "../../redux/productsSlice";
 
 const Products = () => {
@@ -20,6 +19,7 @@ const Products = () => {
   const dispatch = useDispatch();
   const [showFilters, setShowFilters] = useState(false);
   const [showSub, setShowSub] = useState(null);
+  const [filtersCheck, setFiltersCheck] = useState(null);
 
   useEffect(() => {
     const titles = {
@@ -83,6 +83,17 @@ const Products = () => {
     }
   };
 
+  const deleteFiltersHandler = () => {
+    dispatch(deleteFilters());
+    const newFiltersCheck = {};
+    const filtersCheckKeys = Object.keys(filtersCheck);
+    filtersCheckKeys.forEach(
+      (filterKey) => (newFiltersCheck[filterKey] = false)
+    );
+    setFiltersCheck(newFiltersCheck);
+    setShowSub(null);
+  };
+
   const filterPage = (products) => {
     const arrow = (type) => {
       return showSub && showSub[type] ? (
@@ -112,9 +123,31 @@ const Products = () => {
       })
     );
     const filterKeys = Object.keys(filtersObject);
+    let filterState = null;
+    filterKeys.forEach((filter) => {
+      filtersObject[filter].values.forEach((filterValue) => {
+        if (filterState) {
+          if (Object.keys(filterState).includes(filter + filterValue)) {
+            filterState = {
+              ...filterState,
+              [filter + filterValue]: !filterState[filter + filterValue],
+            };
+          } else {
+            filterState = { ...filterState, [filter + filterValue]: false };
+          }
+        } else {
+          filterState = { [filter + filterValue]: false };
+        }
+      });
+    });
+    !filtersCheck && setFiltersCheck(filterState);
 
     // handlers
     const filterHandler = (e, type, value) => {
+      setFiltersCheck({
+        ...filtersCheck,
+        [type + value]: !filtersCheck[type + value],
+      });
       dispatch(
         filterProducts({
           type,
@@ -159,6 +192,12 @@ const Products = () => {
                       <input
                         id={filterValue + filterKey}
                         type="checkbox"
+                        checked={
+                          filtersCheck && filtersCheck[filterKey + filterValue]
+                        }
+                        value={
+                          filtersCheck && filtersCheck[filterKey + filterValue]
+                        }
                         onChange={(e) =>
                           filterHandler(e, filterKey, filterValue)
                         }
@@ -203,14 +242,23 @@ const Products = () => {
                 فیلتر
                 <BiFilter />
               </span>
-              {filteredProducts.length && filterPage(filters)}
+              {filters.length && filterPage(filters)}
             </div>
           )}
-          <div className={style.productsContainer}>
-            {filteredProducts.map((product) => (
-              <Product key={product.id} product={product} />
-            ))}
-          </div>
+          {products[0] !== "false" ? (
+            <div className={style.productsContainer}>
+              {filteredProducts.map((product) => (
+                <Product key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <div className={style.noProduct}>
+              <span>هیج محصولی با این مشخصات موجود نیست</span>
+              <button className={style.btn} onClick={deleteFiltersHandler}>
+                حذف فیلتر ها
+              </button>
+            </div>
+          )}
         </div>
       </section>
     );
