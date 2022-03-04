@@ -20,6 +20,7 @@ let initialState = {
   loading: false,
   cart: [],
   filters: {},
+  filtersCheck: null,
 };
 
 const productSlice = createSlice({
@@ -33,25 +34,37 @@ const productSlice = createSlice({
       state.filters = {};
       state.products = state.allProducts;
     },
+
+    setFilterState: (state, action) => {
+      state.filters = action.payload;
+    },
+
+    setFiltersCheck: (state, action) => {
+      state.filtersCheck = action.payload;
+    },
+
     filterProducts: (state, action) => {
       const payload = action.payload;
-      if (payload.checked)
-        state.filters.hasOwnProperty(payload.type)
-          ? state.filters[payload.type].push(payload.value)
-          : (state.filters[payload.type] = [payload.value]);
-      else {
-        const newFilters = state.filters[payload.type].filter(
-          (filterValue) => filterValue !== payload.value
-        );
-        newFilters.length
-          ? (state.filters[payload.type] = newFilters)
-          : delete state.filters[payload.type];
+      if (payload.byClick) {
+        if (payload.checked)
+          state.filters.hasOwnProperty(payload.type)
+            ? state.filters[payload.type].push(payload.value)
+            : (state.filters[payload.type] = [payload.value]);
+        else {
+          const newFilters = state.filters[payload.type].filter(
+            (filterValue) => filterValue !== payload.value
+          );
+          newFilters.length
+            ? (state.filters[payload.type] = newFilters)
+            : delete state.filters[payload.type];
+        }
       }
       const filteredProducts = state.allProducts.filter(
         (product) => product.category === payload.category
       );
       const products = [];
-      const filterKeys = Object.keys(state.filters);
+      const filters = payload.filters ? payload.filters : state.filters;
+      const filterKeys = Object.keys(filters);
       filteredProducts.forEach((p) => {
         const productFilter = {};
         const specifications = p.specifications;
@@ -61,13 +74,22 @@ const productSlice = createSlice({
               s.filter === filterKey &&
               state.filters[filterKey].includes(s.value)
             ) {
+              filters[filterKey].forEach((filterCheckValue) => {
+                state.filtersCheck[filterKey + filterCheckValue] = true;
+              });
               productFilter[filterKey] = true;
             }
           });
-          if (Object.keys(productFilter).length === filterKeys.length)
+          Object.keys(productFilter).length === filterKeys.length &&
             products.push(p);
         });
       });
+      payload.navigate && Object.keys(state.filters).length
+        ? payload.navigate(
+            payload.address + `?filters=${JSON.stringify(state.filters)}`
+          )
+        : payload.navigate(payload.address);
+
       products.length
         ? (state.products = [...new Set(products)])
         : filterKeys.length
@@ -105,6 +127,12 @@ const productSlice = createSlice({
     },
   },
 });
-export const { addProduct, filterProducts, deleteFilters } =
-  productSlice.actions;
+export const {
+  addProduct,
+  filterProducts,
+  deleteFilters,
+  filterByUrl,
+  setFilterState,
+  setFiltersCheck,
+} = productSlice.actions;
 export default productSlice.reducer;
