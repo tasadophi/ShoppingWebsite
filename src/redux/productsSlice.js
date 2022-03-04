@@ -132,7 +132,6 @@ export const {
   addProduct,
   filterProducts,
   deleteFilters,
-  filterByUrl,
   setFilterState,
   setFiltersCheck,
 } = productSlice.actions;
