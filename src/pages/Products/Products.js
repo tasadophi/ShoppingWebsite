@@ -200,8 +200,8 @@ const Products = () => {
         filterProducts({
           type,
           value,
-          id: e.target.id,
-          checked: e.target.checked,
+          id: e.currentTarget.id,
+          checked: e.currentTarget.checked,
           category,
           navigate,
           byClick: true,
@@ -220,15 +220,12 @@ const Products = () => {
           <BiX className={style.icon} onClick={hideFiltersHandler} />
           {filterKeys.length &&
             filterKeys.map((filterKey, index) => (
-              <li
-                key={index}
-                className={style.filterItem}
-                onClick={() => showHideSubHandler(filterKey)}
-              >
+              <li key={index} className={style.filterItem}>
                 <span
                   className={`${style.filterItemName} ${
                     showSub && showSub[filterKey] && style.active
                   }`}
+                  onClick={() => showHideSubHandler(filterKey)}
                 >
                   {filtersObject[filterKey].name}
                   {arrow(filterKey)}
@@ -246,9 +243,6 @@ const Products = () => {
                         checked={
                           filtersCheck && filtersCheck[filterKey + filterValue]
                         }
-                        value={
-                          filtersCheck && filtersCheck[filterKey + filterValue]
-                        }
                         onChange={(e) =>
                           filterHandler(e, filterKey, filterValue)
                         }
@@ -261,6 +255,13 @@ const Products = () => {
                 </ul>
               </li>
             ))}
+          {Object.keys(filters).length ? (
+            <button className={style.btn} onClick={deleteFiltersHandler}>
+              حذف فیلترها
+            </button>
+          ) : (
+            ""
+          )}
         </ul>
       </>
     );
@@ -277,7 +278,7 @@ const Products = () => {
     );
     return (
       <section className={style.products}>
-        <div className="container">
+        <div className={`container ${style.productsDesktop}`}>
           {category && (
             <div
               className={`${style.filters} ${showFilters && style.showFilters}`}
@@ -285,7 +286,7 @@ const Products = () => {
                 showFilters
                   ? hideFiltersHandler
                   : (e) => {
-                      e.preventDefault();
+                      window.innerWidth < 1024 && e.preventDefault();
                     }
               }
             >
