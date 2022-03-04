@@ -51,6 +51,7 @@ const Header = () => {
     setShowMenu(false);
     setShowSub(initial);
     navigate("/products/" + route);
+    document.querySelector("body").style = null;
   };
 
   return (
