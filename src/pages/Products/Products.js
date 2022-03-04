@@ -2,24 +2,28 @@ import style from "./Products.module.css";
 import { BiDownArrowAlt, BiFilter, BiUpArrowAlt, BiX } from "react-icons/bi";
 import Loading from "../../components/Loading/Loading";
 import ErrorBox from "../../components/ErrorBox/ErrorBox";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import sepratePrice from "../../utils/sepratePrice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import {
   deleteFilters,
+  filterByUrl,
   filterProducts,
+  setFiltersCheck,
+  setFilterState,
 } from "../../redux/productsSlice";
 
 const Products = () => {
   const { group, category } = useParams();
-  const { allProducts, products, loading, error } = useSelector(
-    (state) => state.products
-  );
+  const { allProducts, products, loading, error, filters, filtersCheck } =
+    useSelector((state) => state.products);
   const dispatch = useDispatch();
   const [showFilters, setShowFilters] = useState(false);
   const [showSub, setShowSub] = useState(null);
-  const [filtersCheck, setFiltersCheck] = useState(null);
+  const navigate = useNavigate();
+  const [search] = useSearchParams();
+  const [filtered, setFiltered] = useState(false);
 
   useEffect(() => {
     const titles = {
@@ -58,6 +62,29 @@ const Products = () => {
     dispatch(deleteFilters());
   }, [group, category]);
 
+  useEffect(() => {
+    const filtersValues = search.get("filters");
+    filtersValues &&
+      filtersValues !== JSON.stringify(filters) &&
+      dispatch(setFilterState(JSON.parse(filtersValues)));
+  }, [filters]);
+
+  useEffect(() => {
+    if (products.length) {
+      if (!filtered) {
+        const filtersValues = JSON.parse(search.get("filters"));
+        filtersValues &&
+          dispatch(
+            filterProducts({
+              category,
+              filters: filtersValues,
+            })
+          );
+        setFiltered(true);
+      }
+    }
+  }, [products]);
+
   // handlers
   const showFiltersHandler = () => {
     setShowFilters(true);
@@ -90,8 +117,9 @@ const Products = () => {
     filtersCheckKeys.forEach(
       (filterKey) => (newFiltersCheck[filterKey] = false)
     );
-    setFiltersCheck(newFiltersCheck);
+    dispatch(setFiltersCheck(newFiltersCheck));
     setShowSub(null);
+    navigate(`/products/${group}/${category}`);
   };
 
   const filterPage = (products) => {
@@ -103,12 +131,12 @@ const Products = () => {
       );
     };
     const filtersObject = {};
-    const filters = products[0].specifications.map((s) => ({
+    const filtersParams = products[0].specifications.map((s) => ({
       filter: s.filter,
       name: s.name,
       unit: s.unit,
     }));
-    filters.forEach((filter) => {
+    filtersParams.forEach((filter) => {
       filtersObject[filter.filter] = {
         name: filter.name,
         values: [],
@@ -140,14 +168,15 @@ const Products = () => {
         }
       });
     });
-    !filtersCheck && setFiltersCheck(filterState);
+    !filtersCheck && dispatch(setFiltersCheck(filterState));
 
     // handlers
     const filterHandler = (e, type, value) => {
-      setFiltersCheck({
+      const newFiltersCheck = {
         ...filtersCheck,
         [type + value]: !filtersCheck[type + value],
-      });
+      };
+      dispatch(setFiltersCheck(newFiltersCheck));
       dispatch(
         filterProducts({
           type,
@@ -155,6 +184,9 @@ const Products = () => {
           id: e.target.id,
           checked: e.target.checked,
           category,
+          navigate,
+          byClick: true,
+          address: `/products/${group}/${category}`,
         })
       );
     };
