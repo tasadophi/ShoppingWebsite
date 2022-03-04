@@ -84,11 +84,12 @@ const productSlice = createSlice({
             products.push(p);
         });
       });
-      payload.navigate && Object.keys(state.filters).length
-        ? payload.navigate(
-            payload.address + `?filters=${JSON.stringify(state.filters)}`
-          )
-        : payload.navigate(payload.address);
+      payload.navigate &&
+        (Object.keys(state.filters).length
+          ? payload.navigate(
+              payload.address + `?filters=${JSON.stringify(state.filters)}`
+            )
+          : payload.navigate(payload.address));
 
       products.length
         ? (state.products = [...new Set(products)])
