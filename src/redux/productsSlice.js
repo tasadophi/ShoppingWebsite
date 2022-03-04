@@ -33,6 +33,7 @@ const productSlice = createSlice({
     deleteFilters: (state) => {
       state.filters = {};
       state.products = state.allProducts;
+      state.filtersCheck = null;
     },
 
     setFilterState: (state, action) => {

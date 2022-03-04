@@ -2,13 +2,17 @@ import style from "./Products.module.css";
 import { BiDownArrowAlt, BiFilter, BiUpArrowAlt, BiX } from "react-icons/bi";
 import Loading from "../../components/Loading/Loading";
 import ErrorBox from "../../components/ErrorBox/ErrorBox";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import {
+  useLocation,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import sepratePrice from "../../utils/sepratePrice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import {
   deleteFilters,
-  filterByUrl,
   filterProducts,
   setFiltersCheck,
   setFilterState,
@@ -84,6 +88,21 @@ const Products = () => {
       }
     }
   }, [products]);
+
+  useEffect(() => {
+    if (search.get("filters")) {
+      const filtersValues = JSON.parse(search.get("filters"));
+      dispatch(setFilterState(filtersValues));
+      dispatch(
+        filterProducts({
+          category,
+          filters: filtersValues,
+        })
+      );
+    } else {
+      dispatch(deleteFilters());
+    }
+  }, [search]);
 
   // handlers
   const showFiltersHandler = () => {
