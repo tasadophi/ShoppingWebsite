@@ -11,12 +11,7 @@ import {
 import sepratePrice from "../../utils/sepratePrice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import {
-  deleteFilters,
-  filterProducts,
-  setFiltersCheck,
-  setFilterState,
-} from "../../redux/productsSlice";
+import { deleteFilters, filterProducts } from "../../redux/productsSlice";
 
 const Products = () => {
   const { group, category } = useParams();
@@ -27,6 +22,7 @@ const Products = () => {
   const [showSub, setShowSub] = useState(null);
   const navigate = useNavigate();
   const [search] = useSearchParams();
+  const location = useLocation();
   const [filtered, setFiltered] = useState(false);
 
   useEffect(() => {
@@ -67,42 +63,22 @@ const Products = () => {
   }, [group, category]);
 
   useEffect(() => {
-    const filtersValues = search.get("filters");
-    filtersValues &&
-      filtersValues !== JSON.stringify(filters) &&
-      dispatch(setFilterState(JSON.parse(filtersValues)));
-  }, [filters]);
-
-  useEffect(() => {
-    if (products.length) {
-      if (!filtered) {
-        const filtersValues = JSON.parse(search.get("filters"));
-        filtersValues &&
-          dispatch(
-            filterProducts({
-              category,
-              filters: filtersValues,
-            })
-          );
-        setFiltered(true);
-      }
-    }
-  }, [products]);
-
-  useEffect(() => {
-    if (search.get("filters")) {
-      const filtersValues = JSON.parse(search.get("filters"));
-      dispatch(setFilterState(filtersValues));
+    if (products.length && !filtered) {
+      const paramater = search.toString().split("&");
+      const newParams = paramater.map((p) => {
+        const [key, value] = p.split("=");
+        return { [key]: value };
+      });
       dispatch(
         filterProducts({
           category,
-          filters: filtersValues,
+          search: newParams,
+          byClick: true,
         })
       );
-    } else {
-      dispatch(deleteFilters());
+      setFiltered(true);
     }
-  }, [search]);
+  }, [search, products]);
 
   // handlers
   const showFiltersHandler = () => {
@@ -131,17 +107,11 @@ const Products = () => {
 
   const deleteFiltersHandler = () => {
     dispatch(deleteFilters());
-    const newFiltersCheck = {};
-    const filtersCheckKeys = Object.keys(filtersCheck);
-    filtersCheckKeys.forEach(
-      (filterKey) => (newFiltersCheck[filterKey] = false)
-    );
-    dispatch(setFiltersCheck(newFiltersCheck));
     setShowSub(null);
-    navigate(`/products/${group}/${category}`);
+    navigate(location.pathname, { replace: true });
   };
 
-  const filterPage = (products) => {
+  const filterPage = () => {
     const arrow = (type) => {
       return showSub && showSub[type] ? (
         <BiUpArrowAlt className={style.hidden} />
@@ -149,6 +119,9 @@ const Products = () => {
         <BiDownArrowAlt className={style.hidden} />
       );
     };
+    const products = allProducts.filter((product) =>
+      category ? product.category === category : product.group === group
+    );
     const filtersObject = {};
     const filtersParams = products[0].specifications.map((s) => ({
       filter: s.filter,
@@ -170,44 +143,24 @@ const Products = () => {
       })
     );
     const filterKeys = Object.keys(filtersObject);
-    let filterState = null;
-    filterKeys.forEach((filter) => {
-      filtersObject[filter].values.forEach((filterValue) => {
-        if (filterState) {
-          if (Object.keys(filterState).includes(filter + filterValue)) {
-            filterState = {
-              ...filterState,
-              [filter + filterValue]: !filterState[filter + filterValue],
-            };
-          } else {
-            filterState = { ...filterState, [filter + filterValue]: false };
-          }
-        } else {
-          filterState = { [filter + filterValue]: false };
-        }
-      });
-    });
-    !filtersCheck && dispatch(setFiltersCheck(filterState));
 
     // handlers
     const filterHandler = (e, type, value) => {
-      const newFiltersCheck = {
-        ...filtersCheck,
-        [type + value]: !filtersCheck[type + value],
-      };
-      dispatch(setFiltersCheck(newFiltersCheck));
+      if (e.currentTarget.checked) search.set(type + "_" + value, true);
+      else search.delete(type + "_" + value);
+      const paramater = search.toString().split("&");
+      const newParams = paramater.map((p) => {
+        const [key, value] = p.split("=");
+        return { [key]: value };
+      });
       dispatch(
         filterProducts({
-          type,
-          value,
-          id: e.currentTarget.id,
-          checked: e.currentTarget.checked,
           category,
-          navigate,
+          search: newParams,
           byClick: true,
-          address: `/products/${group}/${category}`,
         })
       );
+      navigate(location.pathname + "?" + search.toString(), { replace: true });
     };
 
     return (
@@ -241,7 +194,9 @@ const Products = () => {
                         id={filterValue + filterKey}
                         type="checkbox"
                         checked={
-                          filtersCheck && filtersCheck[filterKey + filterValue]
+                          filters && filters[filterKey + "_" + filterValue]
+                            ? true
+                            : false
                         }
                         onChange={(e) =>
                           filterHandler(e, filterKey, filterValue)
@@ -273,9 +228,6 @@ const Products = () => {
     const filteredProducts = products.filter((product) =>
       category ? product.category === category : product.group === group
     );
-    const filters = allProducts.filter((product) =>
-      category ? product.category === category : product.group === group
-    );
     return (
       <section className={style.products}>
         <div className={`container ${style.productsDesktop}`}>
@@ -294,7 +246,7 @@ const Products = () => {
                 فیلتر
                 <BiFilter />
               </span>
-              {filters.length && filterPage(filters)}
+              {filterPage()}
             </div>
           )}
           {products[0] !== "false" ? (
