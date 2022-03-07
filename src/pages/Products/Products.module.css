@@ -46,7 +46,7 @@
   user-select: none;
 }
 
-.filterList .btn{
+.filterList .btn {
   display: block;
   width: 100%;
   margin: 1rem auto;
@@ -125,7 +125,7 @@
   cursor: pointer;
   align-items: center;
   justify-content: space-around;
-  height: fit-content;
+  max-height: 25rem;
 }
 
 .product:hover {
