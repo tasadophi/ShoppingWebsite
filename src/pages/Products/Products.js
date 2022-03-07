@@ -211,7 +211,7 @@ const Products = () => {
                 </ul>
               </li>
             ))}
-          {Object.keys(filters).length ? (
+          {Object.keys(filters)[0] ? (
             <button className={style.btn} onClick={deleteFiltersHandler}>
               حذف فیلترها
             </button>
