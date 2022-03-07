@@ -20,7 +20,6 @@ let initialState = {
   loading: false,
   cart: [],
   filters: {},
-  filtersCheck: null,
 };
 
 const productSlice = createSlice({
@@ -30,54 +29,38 @@ const productSlice = createSlice({
     addProduct: (state, action) => {
       state.cart.push(action.payload);
     },
+
     deleteFilters: (state) => {
       state.filters = {};
       state.products = state.allProducts;
       state.filtersCheck = null;
     },
 
-    setFilterState: (state, action) => {
-      state.filters = action.payload;
-    },
-
-    setFiltersCheck: (state, action) => {
-      state.filtersCheck = action.payload;
-    },
-
     filterProducts: (state, action) => {
       const payload = action.payload;
+      state.filters = {};
       if (payload.byClick) {
-        if (payload.checked)
-          state.filters.hasOwnProperty(payload.type)
-            ? state.filters[payload.type].push(payload.value)
-            : (state.filters[payload.type] = [payload.value]);
-        else {
-          const newFilters = state.filters[payload.type].filter(
-            (filterValue) => filterValue !== payload.value
-          );
-          newFilters.length
-            ? (state.filters[payload.type] = newFilters)
-            : delete state.filters[payload.type];
-        }
+        payload.search.forEach((filter) => {
+          const key = Object.keys(filter)[0];
+          state.filters[key] = Boolean(filter[key]);
+        });
       }
       const filteredProducts = state.allProducts.filter(
         (product) => product.category === payload.category
       );
       const products = [];
-      const filters = payload.filters ? payload.filters : state.filters;
+      const filters = state.filters;
       const filterKeys = Object.keys(filters);
       filteredProducts.forEach((p) => {
         const productFilter = {};
         const specifications = p.specifications;
         specifications.forEach((s) => {
           filterKeys.forEach((filterKey) => {
+            const [filter] = filterKey.split("_");
             if (
-              s.filter === filterKey &&
-              state.filters[filterKey].includes(s.value)
+              s.filter === filter &&
+              Object.keys(state.filters).includes(s.filter + "_" + s.value)
             ) {
-              filters[filterKey].forEach((filterCheckValue) => {
-                state.filtersCheck[filterKey + filterCheckValue] = true;
-              });
               productFilter[filterKey] = true;
             }
           });
@@ -85,18 +68,12 @@ const productSlice = createSlice({
             products.push(p);
         });
       });
-      payload.navigate &&
-        (Object.keys(state.filters).length
-          ? payload.navigate(
-              payload.address + `?filters=${JSON.stringify(state.filters)}`
-            )
-          : payload.navigate(payload.address));
-
-      products.length
-        ? (state.products = [...new Set(products)])
-        : filterKeys.length
-        ? (state.products = ["false"])
-        : (state.products = state.allProducts);
+      if (products.length) {
+        state.products = [...new Set(products)];
+      } else {
+        if (filterKeys[0]) state.products = ["false"];
+        else state.products = state.allProducts;
+      }
     },
   },
   extraReducers: {
@@ -129,11 +106,6 @@ const productSlice = createSlice({
     },
   },
 });
-export const {
-  addProduct,
-  filterProducts,
-  deleteFilters,
-  setFilterState,
-  setFiltersCheck,
-} = productSlice.actions;
+export const { addProduct, filterProducts, deleteFilters } =
+  productSlice.actions;
 export default productSlice.reducer;
