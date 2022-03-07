@@ -15,8 +15,9 @@ import { deleteFilters, filterProducts } from "../../redux/productsSlice";
 
 const Products = () => {
   const { group, category } = useParams();
-  const { allProducts, products, loading, error, filters, filtersCheck } =
-    useSelector((state) => state.products);
+  const { allProducts, products, loading, error, filters } = useSelector(
+    (state) => state.products
+  );
   const dispatch = useDispatch();
   const [showFilters, setShowFilters] = useState(false);
   const [showSub, setShowSub] = useState(null);
