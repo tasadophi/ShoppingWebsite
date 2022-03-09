@@ -91,6 +91,15 @@
   margin-left: 1rem;
 }
 
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .active {
   color: #15803d;
 }
@@ -247,9 +256,10 @@
     background-color: initial;
   }
 
-  body {
-    overflow: visible !important;
+  .backdrop {
+    position: static;
   }
+
   .filters .filterTitle {
     display: none;
   }

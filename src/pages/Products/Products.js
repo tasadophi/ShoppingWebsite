@@ -84,13 +84,11 @@ const Products = () => {
   // handlers
   const showFiltersHandler = () => {
     setShowFilters(true);
-    document.querySelector("body").style.overflow = "hidden";
   };
 
   const hideFiltersHandler = (e) => {
     if (e.target === e.currentTarget) {
       setShowFilters(false);
-      document.querySelector("body").style = null;
     }
   };
 
@@ -231,7 +229,7 @@ const Products = () => {
     );
     return (
       <section className={style.products}>
-        <div className={`container ${style.productsDesktop}`}>
+        <div className={`container ${style.productsDesktop} ${showFilters && style.backdrop}`}>
           {category && (
             <div
               className={`${style.filters} ${showFilters && style.showFilters}`}
