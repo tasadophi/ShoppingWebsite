@@ -1,0 +1,25 @@
+.formInputsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formInputsContainer label {
+  font-weight: 700;
+}
+
+.formInputsContainer input {
+  outline: none;
+  border: 1px solid #15803d;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  color: #15803d;
+}
+
+.formInputsContainer input:focus {
+  border: 2px solid #15803d;
+}
+
+.error {
+  color: #b91c1c;
+}
