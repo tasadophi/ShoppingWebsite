@@ -1,0 +1,29 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+}
+
+.modalBox {
+  background-color: #fff;
+  border-radius: 5px;
+  width: fit-content;
+  z-index: 5;
+  position: absolute;
+  top: -100rem;
+  transition: 0.3s;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.showModal {
+  top: 50%;
+  transform: translateY(-50%);
+}
