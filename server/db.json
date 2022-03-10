@@ -30,7 +30,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 11,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 5000,
@@ -75,7 +79,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 11,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 4500,
@@ -120,7 +128,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 11,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 3300,
@@ -165,7 +177,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 11,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 5000,
@@ -210,7 +226,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 10, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 10,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 4500,
@@ -255,7 +275,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 12, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 12,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 4500,
@@ -300,7 +324,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 11,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 5160,
@@ -345,7 +373,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 11,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 4520,
@@ -390,7 +422,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 11,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 5000,
@@ -435,7 +471,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 11,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 4250,
@@ -480,7 +520,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 10, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 10,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 6000,
@@ -525,7 +569,11 @@
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
-        { "name": "نسخه اندروید", "value": 11, "filter": "android" },
+        {
+          "name": "نسخه اندروید",
+          "value": 11,
+          "filter": "android"
+        },
         {
           "name": "باتری",
           "value": 5020,
@@ -575,7 +623,7 @@
         },
         {
           "name": "نوع حافظه داخلی",
-          "value": "هارددیسک",
+          "value": "HDD",
           "filter": "romType"
         }
       ],
@@ -587,5 +635,22 @@
       "image": "https://dkstatics-public.digikala.com/digikala-products/1e3d79f8828bca979e47cae3e505b0a9ca602dd8_1637394809.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     }
   ],
-  "filters": []
+  "users": [
+    {
+      "name": "asdas",
+      "email": "ad@asd.asd",
+      "phone": "09111111111",
+      "password": "@Aa12345",
+      "passwordConfirm": "@Aa12345",
+      "id": 446
+    },
+    {
+      "name": "asdas",
+      "email": "ada@asd.asd",
+      "phone": "09111111112",
+      "password": "@Aa12345",
+      "passwordConfirm": "@Aa12345",
+      "id": 500
+    }
+  ]
 }
