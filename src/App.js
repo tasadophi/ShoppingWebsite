@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Provider, useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Products from "./pages/Products/Products";
@@ -7,6 +7,9 @@ import Layout from "./Layout/Layout";
 import HomePage from "./pages/HomePage";
 import Product from "./pages/Product/Product";
 import { getDataApi } from "./redux/productsSlice";
+import SignUpForm from "./pages/SignUpForm/SignUpForm";
+import LoginForm from "./pages/LoginForm/LoginForm";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,6 +30,9 @@ function App() {
             element={<Product />}
           />
         </Route>
+        <Route path="/signup" element={<SignUpForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Layout>
   );
