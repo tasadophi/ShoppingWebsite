@@ -20,6 +20,7 @@ const Header = () => {
     car: false,
   };
   const [showSub, setShowSub] = useState(initial);
+  const userId = JSON.parse(localStorage.getItem("loggedIn"));
 
   const showMenuHandler = () => {
     setShowMenu(true);
@@ -38,6 +39,11 @@ const Header = () => {
           [property]: !showSub[property],
         })
       : false;
+
+  const loginSignupHandler = (userId) => {
+    if (userId) navigate("/profile");
+    else navigate("/signup");
+  };
 
   const arrow = (type) => {
     return showSub[type] ? (
@@ -67,7 +73,12 @@ const Header = () => {
           <div className={style.bottomHeader}>
             <BiMenu className={style.menuBtn} onClick={showMenuHandler} />
             <div className={style.topHeaders}>
-              <button className={style.btn}>ورود | ثبت نام</button>
+              <button
+                className={style.btn}
+                onClick={() => loginSignupHandler(userId)}
+              >
+                {userId ? "پروفایل" : "ورود | ثبت نام"}
+              </button>
               <BiCart className={style.icon} />
             </div>
           </div>
