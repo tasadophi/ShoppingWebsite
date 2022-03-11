@@ -27,7 +27,7 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     addProduct: (state, action) => {
-      state.cart.push(action.payload);
+      state.cart.push({ ...action.payload, count: 1 });
     },
 
     deleteFilters: (state) => {
