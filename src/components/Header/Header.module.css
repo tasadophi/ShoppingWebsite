@@ -169,6 +169,24 @@
   color: #fff;
 }
 
+.cartIcon {
+  position: relative;
+}
+
+.cartIcon .cartCount {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: -1.2rem;
+  left: -0.8rem;
+  background-color: #bbf7d0;
+  color: #15803d;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .icon {
   font-size: 3.5rem;
   color: #15803d;

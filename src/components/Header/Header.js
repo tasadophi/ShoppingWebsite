@@ -8,6 +8,7 @@ import {
 } from "react-icons/bi";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
@@ -21,6 +22,10 @@ const Header = () => {
   };
   const [showSub, setShowSub] = useState(initial);
   const userId = JSON.parse(localStorage.getItem("loggedIn"));
+  const { cart } = useSelector((state) => state.products);
+  const cartCount = cart.reduce((acc, curr) => {
+    return acc.count + curr.count;
+  }, 0);
 
   const showMenuHandler = () => {
     setShowMenu(true);
@@ -79,7 +84,10 @@ const Header = () => {
               >
                 {userId ? "پروفایل" : "ورود | ثبت نام"}
               </button>
-              <BiCart className={style.icon} />
+              <div className={style.cartIcon}>
+                <BiCart className={style.icon} />
+                <span className={style.cartCount}>{cartCount}</span>
+              </div>
             </div>
           </div>
         </div>
