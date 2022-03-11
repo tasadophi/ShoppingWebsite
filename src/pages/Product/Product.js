@@ -1,6 +1,6 @@
 import { BiShoppingBag } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import ErrorBox from "../../components/ErrorBox/ErrorBox";
 import Loading from "../../components/Loading/Loading";
 import { addProduct } from "../../redux/productsSlice";
@@ -13,6 +13,7 @@ const Product = () => {
   const { products, cart, loading, error } = useSelector(
     (state) => state.products
   );
+  const navigate = useNavigate();
 
   if (products.length) {
     const productName = products.find(
@@ -87,7 +88,12 @@ const Product = () => {
               </div>
               {product.available ? (
                 inCart(product) ? (
-                  <button className={style.btn}>ادامه خرید</button>
+                  <button
+                    className={style.btn}
+                    onClick={() => navigate("/cart")}
+                  >
+                    ادامه خرید
+                  </button>
                 ) : (
                   <button
                     className={style.btn}
