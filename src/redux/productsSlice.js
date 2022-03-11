@@ -30,10 +30,25 @@ const productSlice = createSlice({
       state.cart.push({ ...action.payload, count: 1 });
     },
 
+    addOne: (state, action) => {
+      const cartItem = state.cart.find(
+        (cartItem) => cartItem.id === action.payload
+      );
+      cartItem.count++;
+    },
+
+    removeOne: (state, action) => {
+      const cartItem = state.cart.find(
+        (cartItem) => cartItem.id === action.payload
+      );
+      cartItem.count > 1
+        ? cartItem.count--
+        : (state.cart = state.cart.filter((cItem) => cItem.id !== cartItem.id));
+    },
+
     deleteFilters: (state) => {
       state.filters = {};
       state.products = state.allProducts;
-      state.filtersCheck = null;
     },
 
     filterProducts: (state, action) => {
@@ -106,6 +121,6 @@ const productSlice = createSlice({
     },
   },
 });
-export const { addProduct, filterProducts, deleteFilters } =
+export const { addProduct, filterProducts, deleteFilters, addOne, removeOne } =
   productSlice.actions;
 export default productSlice.reducer;
