@@ -24,7 +24,7 @@ const Header = () => {
   const userId = JSON.parse(localStorage.getItem("loggedIn"));
   const { cart } = useSelector((state) => state.products);
   const cartCount = cart.reduce((acc, curr) => {
-    return acc.count + curr.count;
+    return acc + curr.count;
   }, 0);
 
   const showMenuHandler = () => {
