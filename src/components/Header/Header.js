@@ -7,7 +7,7 @@ import {
   BiX,
 } from "react-icons/bi";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -85,7 +85,9 @@ const Header = () => {
                 {userId ? "پروفایل" : "ورود | ثبت نام"}
               </button>
               <div className={style.cartIcon}>
-                <BiCart className={style.icon} />
+                <Link to="/cart">
+                  <BiCart className={style.icon} />
+                </Link>
                 <span className={style.cartCount}>{cartCount}</span>
               </div>
             </div>
