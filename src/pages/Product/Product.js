@@ -115,7 +115,7 @@ const Product = () => {
               <li key={index}>
                 <span>{specification.name}</span>
                 <span>
-                  {specification.value} {specification.unit}
+                  {specification.valueFa} {specification.unit}
                 </span>
               </li>
             ))}
