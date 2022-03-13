@@ -130,15 +130,16 @@ const Products = () => {
     filtersParams.forEach((filter) => {
       filtersObject[filter.filter] = {
         name: filter.name,
-        values: [],
+        values: {},
         unit: filter.unit,
       };
     });
     products.forEach((p) =>
       p.specifications.forEach((s) => {
         filtersObject[s.filter] &&
-          !filtersObject[s.filter].values.includes(s.value) &&
-          filtersObject[s.filter].values.push(s.value);
+          !Object.keys(filtersObject[s.filter].values).includes(s.value) &&
+          (filtersObject[s.filter].values[s.value] = s.valueFa);
+        console.log(filtersObject);
       })
     );
     const filterKeys = Object.keys(filtersObject);
@@ -187,25 +188,28 @@ const Products = () => {
                     showSub && showSub[filterKey] && style.showSub
                   }`}
                 >
-                  {filtersObject[filterKey].values.map((filterValue, index) => (
-                    <li key={index} className={style.subFilterItem}>
-                      <input
-                        id={filterValue + filterKey}
-                        type="checkbox"
-                        checked={
-                          filters && filters[filterKey + "_" + filterValue]
-                            ? true
-                            : false
-                        }
-                        onChange={(e) =>
-                          filterHandler(e, filterKey, filterValue)
-                        }
-                      />
-                      <label htmlFor={filterValue + filterKey}>
-                        {filterValue} {filtersObject[filterKey].unit}
-                      </label>
-                    </li>
-                  ))}
+                  {Object.keys(filtersObject[filterKey].values).map(
+                    (filterValue, index) => (
+                      <li key={index} className={style.subFilterItem}>
+                        <input
+                          id={filterValue + filterKey}
+                          type="checkbox"
+                          checked={
+                            filters && filters[filterKey + "_" + filterValue]
+                              ? true
+                              : false
+                          }
+                          onChange={(e) =>
+                            filterHandler(e, filterKey, filterValue)
+                          }
+                        />
+                        <label htmlFor={filterValue + filterKey}>
+                          {filtersObject[filterKey].values[filterValue]}{" "}
+                          {filtersObject[filterKey].unit}
+                        </label>
+                      </li>
+                    )
+                  )}
                 </ul>
               </li>
             ))}
@@ -229,7 +233,11 @@ const Products = () => {
     );
     return (
       <section className={style.products}>
-        <div className={`container ${style.productsDesktop} ${showFilters && style.backdrop}`}>
+        <div
+          className={`container ${style.productsDesktop} ${
+            showFilters && style.backdrop
+          }`}
+        >
           {category && (
             <div
               className={`${style.filters} ${showFilters && style.showFilters}`}
