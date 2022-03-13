@@ -122,7 +122,7 @@ const Products = () => {
       category ? product.category === category : product.group === group
     );
     const filtersObject = {};
-    const filtersParams = products[0].specifications.map((s) => ({
+    const filtersParams = products[0].allFilters.map((s) => ({
       filter: s.filter,
       name: s.name,
       unit: s.unit,
