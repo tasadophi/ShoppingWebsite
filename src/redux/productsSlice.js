@@ -26,6 +26,11 @@ const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
+    initCart: (state) => {
+      const localCart = JSON.parse(localStorage.getItem("cart"));
+      if (localCart) state.cart = localCart;
+    },
+
     addProduct: (state, action) => {
       state.cart.push({ ...action.payload, count: 1 });
     },
@@ -121,6 +126,12 @@ const productSlice = createSlice({
     },
   },
 });
-export const { addProduct, filterProducts, deleteFilters, addOne, removeOne } =
-  productSlice.actions;
+export const {
+  addProduct,
+  filterProducts,
+  deleteFilters,
+  addOne,
+  removeOne,
+  initCart,
+} = productSlice.actions;
 export default productSlice.reducer;
