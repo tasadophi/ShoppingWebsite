@@ -215,9 +215,9 @@ const Header = () => {
               </li>
               <li
                 className={style.subMenuItem}
-                onClick={() => changeRoute("toys/logo")}
+                onClick={() => changeRoute("toys/puzzle")}
               >
-                لگو و ساختنی
+                پازل و ساختنی
               </li>
               <li
                 className={style.subMenuItem}

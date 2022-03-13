@@ -43,7 +43,7 @@ const Products = () => {
       women: "زنانه",
       children: "بچگانه",
       fekri: "فکری و آموزشی",
-      logo: "لگو و ساختنی",
+      puzzle: "پازل و ساختنی",
       figure: "عروسک و فیگور",
       speener: "اسپینر و سرگرمی",
       gun: "تفنگ",
