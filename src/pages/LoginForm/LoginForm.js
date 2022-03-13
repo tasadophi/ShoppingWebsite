@@ -1,6 +1,6 @@
 import { useFormik } from "formik";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import * as yup from "yup";
 import Input from "../../common/Input/Input";
 import Modal from "../../common/Modal/Modal";
@@ -12,6 +12,7 @@ const LoginForm = () => {
   const [showModal, setShowModal] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const [search] = useSearchParams();
 
   useEffect(() => {
     document.title = "ورود";
@@ -33,7 +34,8 @@ const LoginForm = () => {
     if (user) {
       if (user.password === password) {
         localStorage.setItem("loggedIn", JSON.stringify(user.id));
-        navigate("/profile");
+        const redirect = search.get("back");
+        redirect ? navigate(`/${redirect}`) : navigate("/profile");
       } else {
         setError("رمز عبور اشتباه است!");
         setShowModal(true);
@@ -82,7 +84,11 @@ const LoginForm = () => {
           >
             ورود
           </button>
-          <Link to="/signup" className={style.hasNotAccount}>
+          <Link
+            replace={true}
+            to={`/signup/?${search.toString()}`}
+            className={style.hasNotAccount}
+          >
             حسابی ندارید؟
           </Link>
         </div>

@@ -1,6 +1,6 @@
 import { useFormik } from "formik";
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import * as yup from "yup";
 import Input from "../../common/Input/Input";
 import Modal from "../../common/Modal/Modal";
@@ -13,6 +13,7 @@ const SignUpForm = () => {
   const [users, setUsers] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [error, setError] = useState("");
+  const [search] = useSearchParams();
 
   useEffect(() => {
     document.title = "ثبت نام";
@@ -63,7 +64,8 @@ const SignUpForm = () => {
       const id = Math.floor(Math.random() * 1000);
       postUser({ ...values, id });
       localStorage.setItem("loggedIn", JSON.stringify(id));
-      navigate("/profile");
+      const redirect = search.get("back");
+      redirect ? navigate(`/${redirect}`) : navigate("/profile");
     }
   };
 
@@ -121,7 +123,11 @@ const SignUpForm = () => {
           >
             ثبت نام
           </button>
-          <Link to="/login" className={style.hasAccount}>
+          <Link
+            replace={true}
+            to={`/login/?${search.toString()}`}
+            className={style.hasAccount}
+          >
             آیا قبلا ثبت نام کردید؟
           </Link>
         </div>
