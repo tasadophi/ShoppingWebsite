@@ -63,6 +63,7 @@ const Product = () => {
           <div className={style.main}>
             <div className={style.imgContainer}>
               <img src={product.image} alt={product.name} />
+              <span className={style.productName}>{product.name}</span>
             </div>
             <div className={style.description}>
               <div className={style.seller}>

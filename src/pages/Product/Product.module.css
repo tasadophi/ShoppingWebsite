@@ -15,8 +15,11 @@
   height: fit-content;
   padding: 3rem 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-radius: 5px;
+  gap: 1rem;
 }
 
 .product .imgContainer img {
@@ -25,6 +28,12 @@
   width: 30rem;
   height: 31rem;
   padding: 1rem 0;
+}
+
+.product .imgContainer .productName {
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .product .description {
