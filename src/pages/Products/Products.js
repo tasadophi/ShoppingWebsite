@@ -139,7 +139,6 @@ const Products = () => {
         filtersObject[s.filter] &&
           !Object.keys(filtersObject[s.filter].values).includes(s.value) &&
           (filtersObject[s.filter].values[s.value] = s.valueFa);
-        console.log(filtersObject);
       })
     );
     const filterKeys = Object.keys(filtersObject);
