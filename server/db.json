@@ -9,35 +9,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 256,
+          "valueFa": 256,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 12,
+          "valueFa": 12,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 108,
+          "valueFa": 108,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 11,
+          "valueFa": 11,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 5000,
+          "valueFa": 5000,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -58,35 +64,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 256,
+          "valueFa": 256,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 8,
+          "valueFa": 8,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 64,
+          "valueFa": 64,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 11,
+          "valueFa": 11,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 4500,
+          "valueFa": 4500,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -107,35 +119,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 256,
+          "valueFa": 256,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 8,
+          "valueFa": 8,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 12,
+          "valueFa": 12,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 11,
+          "valueFa": 11,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 3300,
+          "valueFa": 3300,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -156,35 +174,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 32,
+          "valueFa": 32,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 3,
+          "valueFa": 3,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 13,
+          "valueFa": 13,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 11,
+          "valueFa": 11,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 5000,
+          "valueFa": 5000,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -205,35 +229,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 128,
+          "valueFa": 128,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 8,
+          "valueFa": 8,
           "unit": "گیگابایت",
-          "filter": "ran"
+          "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 12,
+          "valueFa": 12,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 10,
+          "valueFa": 10,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 4500,
+          "valueFa": 4500,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -254,35 +284,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 256,
+          "valueFa": 256,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 8,
+          "valueFa": 8,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 12,
+          "valueFa": 12,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 12,
+          "valueFa": 12,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 4500,
+          "valueFa": 4500,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -303,35 +339,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 256,
+          "valueFa": 256,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 8,
+          "valueFa": 8,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 48,
+          "valueFa": 48,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 11,
+          "valueFa": 11,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 5160,
+          "valueFa": 5160,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -352,35 +394,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 256,
+          "valueFa": 256,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 8,
+          "valueFa": 8,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 48,
+          "valueFa": 48,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 11,
+          "valueFa": 11,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 4520,
+          "valueFa": 4520,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -401,35 +449,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 128,
+          "valueFa": 128,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 8,
+          "valueFa": 8,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 64,
+          "valueFa": 64,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 11,
+          "valueFa": 11,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 5000,
+          "valueFa": 5000,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -450,35 +504,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 256,
+          "valueFa": 256,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 8,
+          "valueFa": 8,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 64,
+          "valueFa": 64,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 11,
+          "valueFa": 11,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 4250,
+          "valueFa": 4250,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -499,35 +559,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 256,
+          "valueFa": 256,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 4,
+          "valueFa": 4,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 48,
+          "valueFa": 48,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 10,
+          "valueFa": 10,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 6000,
+          "valueFa": 6000,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -548,35 +614,41 @@
         {
           "name": "تعداد سیمکارت",
           "value": 2,
+          "valueFa": 2,
           "unit": "عدد",
           "filter": "simcard"
         },
         {
           "name": "حافظه داخلی",
           "value": 128,
+          "valueFa": 128,
           "unit": "گیگابایت",
           "filter": "rom"
         },
         {
           "name": "حافظه رم",
           "value": 6,
+          "valueFa": 6,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "دوربین",
           "value": 108,
+          "valueFa": 108,
           "unit": "مگاپیکسل",
           "filter": "camera"
         },
         {
           "name": "نسخه اندروید",
           "value": 11,
+          "valueFa": 11,
           "filter": "android"
         },
         {
           "name": "باتری",
           "value": 5020,
+          "valueFa": 5020,
           "unit": "میلی آمپر ساعت",
           "filter": "battery"
         }
@@ -597,33 +669,39 @@
         {
           "name": "سازنده پردازنده",
           "value": "Intel",
+          "valueFa": "Intel",
           "filter": "cpuCreator"
         },
         {
           "name": "سری پردازنده",
           "value": "Celeron",
+          "valueFa": "Celeron",
           "filter": "cpuSeries"
         },
         {
           "name": "حافظه رم",
           "value": 4,
+          "valueFa": 4,
           "unit": "گیگابایت",
           "filter": "ram"
         },
         {
           "name": "نوع حافظه رم",
           "value": "DDR4",
+          "valueFa": "DDR4",
           "filter": "ramType"
         },
         {
           "name": "حافظه داخلی",
           "value": 1,
+          "valueFa": 1,
           "unit": "ترابایت",
           "filter": "rom"
         },
         {
           "name": "نوع حافظه داخلی",
           "value": "HDD",
+          "valueFa": "هارددیسک",
           "filter": "romType"
         }
       ],
@@ -633,6 +711,162 @@
       "price": 8899000,
       "offPrice": 8599000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/1e3d79f8828bca979e47cae3e505b0a9ca602dd8_1637394809.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 14,
+      "group": "digital",
+      "category": "laptops",
+      "brand": "asus",
+      "specifications": [
+        {
+          "name": "سازنده پردازنده",
+          "value": "Intel",
+          "valueFa": "Intel",
+          "filter": "cpuCreator"
+        },
+        {
+          "name": "سری پردازنده",
+          "value": "Core_i7",
+          "valueFa": "Core i7",
+          "filter": "cpuSeries"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 16,
+          "valueFa": 16,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "نوع حافظه رم",
+          "value": "DDR4",
+          "valueFa": "DDR4",
+          "filter": "ramType"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 512,
+          "valueFa": 512,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "نوع حافظه داخلی",
+          "value": "SSD",
+          "valueFa": "SSD",
+          "filter": "romType"
+        }
+      ],
+      "available": true,
+      "name": "لپتاپ ایسوس مدل G512LW-WS74",
+      "colors": ["مشکی"],
+      "price": 47900000,
+      "offPrice": 47900000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/b2c09c50d1c86c97ed4def71c9a2671f8d182bc5_1639833640.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 15,
+      "group": "digital",
+      "category": "laptops",
+      "brand": "asus",
+      "specifications": [
+        {
+          "name": "سازنده پردازنده",
+          "value": "Apple",
+          "valueFa": "Apple",
+          "filter": "cpuCreator"
+        },
+        {
+          "name": "سری پردازنده",
+          "value": "M1",
+          "valueFa": "M1",
+          "filter": "cpuSeries"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 8,
+          "valueFa": 8,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "نوع حافظه رم",
+          "value": "Unified",
+          "valueFa": "Unified",
+          "filter": "ramType"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 256,
+          "valueFa": 256,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "نوع حافظه داخلی",
+          "value": "SSD",
+          "valueFa": "SSD",
+          "filter": "romType"
+        }
+      ],
+      "available": true,
+      "name": "لپتاپ اپل مدل MacBook Air MGN93 2020",
+      "colors": ["نقره ای"],
+      "price": 29899000,
+      "offPrice": 29899000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/563307ffa72f0af6c18afe6eab503427bb9030bf_1605100725.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 16,
+      "group": "digital",
+      "category": "laptops",
+      "brand": "asus",
+      "specifications": [
+        {
+          "name": "سازنده پردازنده",
+          "value": "AMD",
+          "valueFa": "AMD",
+          "filter": "cpuCreator"
+        },
+        {
+          "name": "سری پردازنده",
+          "value": "Ryzen_5",
+          "valueFa": "Ryzen 5",
+          "filter": "cpuSeries"
+        },
+        {
+          "name": "حافظه رم",
+          "value": 8,
+          "valueFa": 8,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "نوع حافظه رم",
+          "value": "DDR4",
+          "valueFa": "DDR4",
+          "filter": "ramType"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 1,
+          "valueFa": 1,
+          "unit": "ترابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "نوع حافظه داخلی",
+          "value": "HDD",
+          "valueFa": "هارددیسک",
+          "filter": "romType"
+        }
+      ],
+      "available": true,
+      "name": "لپتاپ لنوو مدل Ideapad L340 - C",
+      "colors": ["سرمه ای تیره"],
+      "price": 18200000,
+      "offPrice": 18200000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/113399956.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     }
   ],
   "users": [
