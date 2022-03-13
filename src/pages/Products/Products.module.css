@@ -134,7 +134,8 @@
   cursor: pointer;
   align-items: center;
   justify-content: space-around;
-  max-height: 25rem;
+  max-height: 23rem;
+  gap: 1rem;
 }
 
 .product:hover {
