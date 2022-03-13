@@ -1,22 +1,29 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Products from "./pages/Products/Products";
 import Layout from "./Layout/Layout";
 import HomePage from "./pages/HomePage";
 import Product from "./pages/Product/Product";
-import { getDataApi } from "./redux/productsSlice";
+import { getDataApi, initCart } from "./redux/productsSlice";
 import SignUpForm from "./pages/SignUpForm/SignUpForm";
 import LoginForm from "./pages/LoginForm/LoginForm";
 import Profile from "./pages/Profile/Profile";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
+  const { cart } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getDataApi());
+    dispatch(initCart());
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <Layout>
@@ -33,6 +40,7 @@ function App() {
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </Layout>
   );
