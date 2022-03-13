@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { BiMinus, BiPlus, BiTrash } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { addOne, removeOne } from "../../redux/productsSlice";
 import sepratePrice from "../../utils/sepratePrice";
 import style from "./Cart.module.css";
@@ -47,11 +48,14 @@ const Cart = () => {
   const payPrice = totalCartPrice - totalOffPrice();
 
   const CartItem = ({ cartItem }) => {
+    // handlers
     const add = () => {
       dispatch(addOne(cartItem.id));
     };
 
     const remove = () => {
+      if (cartItem.count === 1)
+        toast.error(`${cartItem.name} از سبد خرید حذف شد`);
       dispatch(removeOne(cartItem.id));
     };
 

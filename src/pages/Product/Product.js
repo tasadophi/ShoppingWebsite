@@ -1,6 +1,7 @@
 import { BiShoppingBag } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import ErrorBox from "../../components/ErrorBox/ErrorBox";
 import Loading from "../../components/Loading/Loading";
 import { addProduct } from "../../redux/productsSlice";
@@ -28,6 +29,7 @@ const Product = () => {
 
   // handlers
   const addToCart = (product) => {
+    toast.success(`${product.name} به سبد خرید افزوده شد!`);
     dispatch(addProduct(product));
   };
 

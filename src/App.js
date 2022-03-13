@@ -11,6 +11,8 @@ import SignUpForm from "./pages/SignUpForm/SignUpForm";
 import LoginForm from "./pages/LoginForm/LoginForm";
 import Profile from "./pages/Profile/Profile";
 import Cart from "./pages/Cart/Cart";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const { cart } = useSelector((state) => state.products);
@@ -24,6 +26,11 @@ function App() {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
+
+  const styles = {
+    color: "#fff",
+    fontSize: "1.7rem",
+  };
 
   return (
     <Layout>
@@ -42,6 +49,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      <ToastContainer rtl={true} theme="colored" style={styles} />
     </Layout>
   );
 }
