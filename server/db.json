@@ -5,6 +5,37 @@
       "group": "digital",
       "category": "mobiles",
       "brand": "samsung",
+      "allFilters": [
+        {
+          "name": "تعداد سیمکارت",
+          "unit": "عدد",
+          "filter": "simcard"
+        },
+        {
+          "name": "حافظه داخلی",
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "حافظه رم",
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "دوربین",
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        },
+        {
+          "name": "نسخه اندروید",
+          "filter": "android"
+        },
+        {
+          "name": "باتری",
+          "unit": "میلی آمپر ساعت",
+          "filter": "battery"
+        }
+      ],
       "specifications": [
         {
           "name": "تعداد سیمکارت",
@@ -665,6 +696,34 @@
       "group": "digital",
       "category": "laptops",
       "brand": "asus",
+      "allFilters": [
+        {
+          "name": "سازنده پردازنده",
+          "filter": "cpuCreator"
+        },
+        {
+          "name": "سری پردازنده",
+          "filter": "cpuSeries"
+        },
+        {
+          "name": "حافظه رم",
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "نوع حافظه رم",
+          "filter": "ramType"
+        },
+        {
+          "name": "حافظه داخلی",
+          "unit": "ترابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "نوع حافظه داخلی",
+          "filter": "romType"
+        }
+      ],
       "specifications": [
         {
           "name": "سازنده پردازنده",
@@ -867,6 +926,1642 @@
       "price": 18200000,
       "offPrice": 18200000,
       "image": "https://dkstatics-public.digikala.com/digikala-products/113399956.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 17,
+      "group": "digital",
+      "category": "tablets",
+      "brand": "samsung",
+      "allFilters": [
+        {
+          "name": "مقدار رم",
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "حافظه داخلی",
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "نسخه سیستم عامل",
+          "filter": "os"
+        },
+        {
+          "name": "دوربین",
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "مقدار رم",
+          "value": 3,
+          "valueFa": 3,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 32,
+          "valueFa": 32,
+          "unit": "گیگابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "نسخه سیستم عامل",
+          "value": "andorid10",
+          "valueFa": "اندروید ۱۰",
+          "filter": "os"
+        },
+        {
+          "name": "دوربین",
+          "value": 8,
+          "valueFa": 8,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        }
+      ],
+      "available": true,
+      "name": "تبلت سامسونگ مدل Galaxy Tab A7 Lite SM-T225",
+      "colors": ["نقره ای", "خاکستری"],
+      "price": 3850000,
+      "offPrice": 3850000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/519f68004e41d4023aecc713718076029204b227_1624275657.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 18,
+      "group": "digital",
+      "category": "tablets",
+      "brand": "apple",
+      "specifications": [
+        {
+          "name": "مقدار رم",
+          "value": 16,
+          "valueFa": 16,
+          "unit": "گیگابایت",
+          "filter": "ram"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": 2,
+          "valueFa": 2,
+          "unit": "ترابایت",
+          "filter": "rom"
+        },
+        {
+          "name": "نسخه سیستم عامل",
+          "value": "ios14",
+          "valueFa": "IOS 14",
+          "filter": "os"
+        },
+        {
+          "name": "دوربین",
+          "value": 12,
+          "valueFa": 12,
+          "unit": "مگاپیکسل",
+          "filter": "camera"
+        }
+      ],
+      "available": true,
+      "name": "تبلت اپل مدل iPad Pro 12.9 inch 2021 5G",
+      "colors": ["خاکستری"],
+      "price": 59999000,
+      "offPrice": 59999000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/b87281fc773e9eb4b5167e395690d05422fbaf98_1624953175.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 19,
+      "group": "digital",
+      "category": "cameras",
+      "brand": "sony",
+      "allFilters": [
+        {
+          "name": "سایز فیلتر",
+          "unit": "میلی متر",
+          "filter": "filterSize"
+        },
+        {
+          "name": "حافظه داخلی",
+          "filter": "rom"
+        },
+        {
+          "name": "نوع ذخیره سازی",
+          "filter": "saveType"
+        },
+        {
+          "name": "بزرگنمایی اپتیکال",
+          "unit": "برابر",
+          "filter": "opticalZoom"
+        },
+        {
+          "name": "روزولوشن فیلم",
+          "filter": "videoResolution"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "سایز فیلتر",
+          "value": 67,
+          "valueFa": 67,
+          "unit": "میلی متر",
+          "filter": "filterSize"
+        },
+        {
+          "name": "حافظه داخلی",
+          "value": "0",
+          "valueFa": "ندارد",
+          "filter": "rom"
+        },
+        {
+          "name": "نوع ذخیره سازی",
+          "value": "sdcard",
+          "valueFa": "کارت حافظه",
+          "filter": "saveType"
+        },
+        {
+          "name": "بزرگنمایی اپتیکال",
+          "value": 20,
+          "valueFa": 20,
+          "unit": "برابر",
+          "filter": "opticalZoom"
+        },
+        {
+          "name": "روزولوشن فیلم",
+          "value": "4k",
+          "valueFa": "4K",
+          "filter": "videoResolution"
+        }
+      ],
+      "available": true,
+      "name": "دوربین فیلم برداری پاناسونیک مدل HC-X1",
+      "colors": ["مشکی"],
+      "price": 85005500,
+      "offPrice": 82800000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/3307209.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 20,
+      "group": "digital",
+      "category": "cameras",
+      "brand": "sony",
+      "specifications": [
+        {
+          "name": "سایز فیلتر",
+          "value": 52,
+          "valueFa": 52,
+          "unit": "میلی متر",
+          "filter": "filterSize"
+        },
+        {
+          "name": "نوع ذخیره سازی",
+          "value": "sdcard",
+          "valueFa": "کارت حافظه",
+          "filter": "saveType"
+        },
+        {
+          "name": "بزرگنمایی اپتیکال",
+          "value": 10,
+          "valueFa": 10,
+          "unit": "برابر",
+          "filter": "opticalZoom"
+        },
+        {
+          "name": "روزولوشن فیلم",
+          "value": "4k",
+          "valueFa": "4K",
+          "filter": "videoResolution"
+        }
+      ],
+      "available": true,
+      "name": "دوربین فیلم برداری سونی مدل FDR-AX33",
+      "colors": ["مشکی"],
+      "price": 35850000,
+      "offPrice": 35850000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/d32cbf644ca1d61c91b162c851a60fb2f683ad57_1600787263.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 21,
+      "group": "digital",
+      "category": "headphones",
+      "brand": "samsung",
+      "allFilters": [
+        {
+          "name": "نوع گوشی",
+          "filter": "earType"
+        },
+        {
+          "name": "محدوده عملکرد",
+          "unit": "متر",
+          "filter": "rangeWork"
+        },
+        {
+          "name": "قطر درایور",
+          "unit": "میلی متر",
+          "filter": "driverSize"
+        },
+        {
+          "name": "نوع اتصال",
+          "filter": "connectType"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "نوع گوشی",
+          "value": "twoEar",
+          "valueFa": "دو گوشی",
+          "filter": "earType"
+        },
+        {
+          "name": "محدوده عملکرد",
+          "value": 10,
+          "valueFa": 10,
+          "unit": "متر",
+          "filter": "rangeWork"
+        },
+        {
+          "name": "قطر درایور",
+          "value": 11,
+          "valueFa": 11,
+          "unit": "میلی متر",
+          "filter": "driverSize"
+        },
+        {
+          "name": "نوع اتصال",
+          "value": "wireless",
+          "valueFa": "بی سیم",
+          "filter": "connectType"
+        }
+      ],
+      "available": true,
+      "name": "هدفون بی سیم سامسونگ مدل Galaxy Buds Pro",
+      "colors": ["مشکی", "بنفش", "نقره ای"],
+      "price": 2680000,
+      "offPrice": 2680000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/9f6f69f9501855dae03de6a404fbccff59f40bc1_1610798902.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 22,
+      "group": "digital",
+      "category": "headphones",
+      "brand": "samsung",
+      "specifications": [
+        {
+          "name": "نوع گوشی",
+          "value": "twoEar",
+          "valueFa": "دو گوشی",
+          "filter": "earType"
+        },
+        {
+          "name": "قطر درایور",
+          "value": 8,
+          "valueFa": 8,
+          "unit": "میلی متر",
+          "filter": "driverSize"
+        },
+        {
+          "name": "نوع اتصال",
+          "value": "wire",
+          "valueFa": "با سیم",
+          "filter": "connectType"
+        }
+      ],
+      "available": true,
+      "name": "هندزفری سامسونگ مدل AKG-EO-IC100",
+      "colors": ["سفید"],
+      "price": 2680000,
+      "offPrice": 2680000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/c5b4fdd712dff5cce12ebd60777c3c10d370ec8b_1626245955.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 23,
+      "group": "clothes",
+      "category": "men",
+      "allFilters": [
+        {
+          "name": "جنس",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "filter": "type"
+        },
+        {
+          "name": "یقه",
+          "filter": "yaghe"
+        },
+        {
+          "name": "آستین",
+          "filter": "astin"
+        },
+        {
+          "name": "نحوه بسته شدن",
+          "filter": "closeType"
+        },
+        {
+          "name": "نوع فاق",
+          "filter": "faghType"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "جنس",
+          "value": "jodon",
+          "valueFa": "جودون",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "value": "simple",
+          "valueFa": "ساده",
+          "filter": "type"
+        },
+        {
+          "name": "یقه",
+          "value": "dokmedar",
+          "valueFa": "دکمه دار",
+          "filter": "yaghe"
+        },
+        {
+          "name": "آستین",
+          "value": "kootah",
+          "valueFa": "کوتاه",
+          "filter": "astin"
+        }
+      ],
+      "available": true,
+      "name": "پولوشرت آستین کوتاه مردانه باینت مدل 379-1",
+      "size": ["L", "XL", "XXL", "XXXL"],
+      "price": 248000,
+      "offPrice": 199000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/120695856.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 24,
+      "group": "clothes",
+      "category": "men",
+      "specifications": [
+        {
+          "name": "جنس",
+          "value": "nakhi",
+          "valueFa": "الیاف نخی",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "value": "simple",
+          "valueFa": "ساده",
+          "filter": "type"
+        },
+        {
+          "name": "یقه",
+          "value": "bargardan",
+          "valueFa": "برگردان",
+          "filter": "yaghe"
+        },
+        {
+          "name": "آستین",
+          "value": "boland",
+          "valueFa": "بلند",
+          "filter": "astin"
+        }
+      ],
+      "available": true,
+      "name": "پیراهن مردانه زی سا مدل 153140501",
+      "size": ["L", "XL"],
+      "price": 459000,
+      "offPrice": 207000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/7b2dc281edd0953e8dcf5dcea964ae5ca6932814_1633169474.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 25,
+      "group": "clothes",
+      "category": "men",
+      "specifications": [
+        {
+          "name": "جنس",
+          "value": "triko",
+          "valueFa": "تریکو",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "value": "simple",
+          "valueFa": "ساده",
+          "filter": "type"
+        },
+        {
+          "name": "نحوه بسته شدن",
+          "value": "jolobaz",
+          "valueFa": "جلوباز",
+          "filter": "closeType"
+        }
+      ],
+      "available": true,
+      "name": "سوییشرت مردانه باینت کد 563-1",
+      "size": ["M", "XXXL"],
+      "price": 598000,
+      "offPrice": 448000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/117596894.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 26,
+      "group": "clothes",
+      "category": "men",
+      "specifications": [
+        {
+          "name": "جنس",
+          "value": "nakh",
+          "valueFa": "نخ",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "value": "simple",
+          "valueFa": "ساده",
+          "filter": "type"
+        },
+        {
+          "name": "نحوه بسته شدن",
+          "value": "dokme",
+          "valueFa": "دکمه",
+          "filter": "closeType"
+        },
+        {
+          "name": "نوع فاق",
+          "value": "middle",
+          "valueFa": "متوسط",
+          "filter": "faghType"
+        }
+      ],
+      "available": true,
+      "name": "شلوار جین مردانه آر اِن اِس مدل 133054-32",
+      "size": [31, 34],
+      "price": 585000,
+      "offPrice": 344000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/634891972b7e6d6ab91868f4901c00a75d0b860e_1615798510.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 27,
+      "group": "clothes",
+      "category": "women",
+      "allFilters": [
+        {
+          "name": "جنس",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "filter": "type"
+        },
+        {
+          "name": "نحوه بسته شدن",
+          "filter": "closeType"
+        },
+        {
+          "name": "قد",
+          "filter": "ghad"
+        },
+        {
+          "name": "آستین",
+          "filter": "astin"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "جنس",
+          "value": "kerep",
+          "valueFa": "کرپ",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "value": "tarhdar",
+          "valueFa": "طرح دار",
+          "filter": "type"
+        },
+        {
+          "name": "نحوه بسته شدن",
+          "value": "ghazan",
+          "valueFa": "قزن",
+          "filter": "closeType"
+        },
+        {
+          "name": "قد",
+          "value": "zirezanoo",
+          "valueFa": "زیر زانو",
+          "filter": "ghad"
+        }
+      ],
+      "available": true,
+      "name": "مانتو زنانه السانا مدل هوران کد 82003",
+      "size": [36, 38],
+      "price": 278000,
+      "offPrice": 278000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/820643690ffad677a9e4e2845617a89e1ec9718e_1618825852.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 28,
+      "group": "clothes",
+      "category": "women",
+      "specifications": [
+        {
+          "name": "جنس",
+          "value": "pashm",
+          "valueFa": "پشم",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "value": "simple",
+          "valueFa": "ساده",
+          "filter": "type"
+        },
+        {
+          "name": "نحوه بسته شدن",
+          "value": "jolobaz",
+          "valueFa": "جلو باز",
+          "filter": "closeType"
+        },
+        {
+          "name": "قد",
+          "value": "balazanoo",
+          "valueFa": "روی زانو",
+          "filter": "ghad"
+        },
+        {
+          "name": "آستین",
+          "value": "boland",
+          "valueFa": "بلند",
+          "filter": "astin"
+        }
+      ],
+      "available": true,
+      "name": "پالتو زنانه سیدونا مدل SI1002-200",
+      "size": ["S"],
+      "price": 780000,
+      "offPrice": 780000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/df8b5e0a72e008e82d2138554b0649008ba3d23f_1634639381.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 29,
+      "group": "clothes",
+      "category": "women",
+      "specifications": [
+        {
+          "name": "جنس",
+          "value": "nakhi",
+          "valueFa": "الیاف نخی",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "value": "tarhdar",
+          "valueFa": "طرح دار",
+          "filter": "type"
+        },
+        {
+          "name": "نحوه بسته شدن",
+          "value": "jolobaz",
+          "valueFa": "جلو باز",
+          "filter": "closeType"
+        },
+        {
+          "name": "قد",
+          "value": "zirezanoo",
+          "valueFa": "زیر زانو",
+          "filter": "ghad"
+        },
+        {
+          "name": "آستین",
+          "value": "boland",
+          "valueFa": "بلند",
+          "filter": "astin"
+        }
+      ],
+      "available": true,
+      "name": "پالتو زنانه سیدونا مدل SI01015-096",
+      "size": ["S", "M"],
+      "price": 1490000,
+      "offPrice": 522000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/98882951ae8b4c2d2af4e8f7ddd0d49ae490329f_1642232507.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 30,
+      "group": "clothes",
+      "category": "children",
+      "allFilters": [
+        {
+          "name": "جنس",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "filter": "type"
+        },
+        {
+          "name": "قد",
+          "filter": "ghad"
+        },
+        {
+          "name": "آستین",
+          "filter": "astin"
+        },
+        {
+          "name": "نحوه بسته شدن",
+          "filter": "closeType"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "جنس",
+          "value": "triko",
+          "valueFa": "تریکو",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "value": "chap",
+          "valueFa": "چاپ",
+          "filter": "type"
+        },
+        {
+          "name": "قد",
+          "value": "roozanoo",
+          "valueFa": "روی زانو",
+          "filter": "ghad"
+        },
+        {
+          "name": "آستین",
+          "value": "boland",
+          "valueFa": "بلند",
+          "filter": "astin"
+        }
+      ],
+      "available": true,
+      "name": "پیراهن دخترانه سین سی مدل Fox35",
+      "size": ["۷ تا ۸ سال", "۸ تا ۹ سال"],
+      "price": 250000,
+      "offPrice": 250000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/34d0045d463cebf400d57227cbc97383a142a4fa_1644327554.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 31,
+      "group": "clothes",
+      "category": "children",
+      "specifications": [
+        {
+          "name": "جنس",
+          "value": "nakh",
+          "valueFa": "نخ",
+          "filter": "material"
+        },
+        {
+          "name": "طرح",
+          "value": "simple",
+          "valueFa": "ساده",
+          "filter": "type"
+        },
+        {
+          "name": "نحوه بسته شدن",
+          "value": "jolobaste",
+          "valueFa": "جلو بسته",
+          "filter": "closeType"
+        }
+      ],
+      "available": true,
+      "name": "هودی پسرانه مدل گرگ کد F400",
+      "size": [45, 50],
+      "price": 59700,
+      "offPrice": 59700,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/efef251334cbfbe5c4fd45120f12c42c0d789039_1608020475.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 32,
+      "group": "toys",
+      "category": "fekri",
+      "allFilters": [
+        {
+          "name": "سبک بازی",
+          "filter": "sabk"
+        },
+        {
+          "name": "رده سنی",
+          "filter": "radeseni"
+        },
+        {
+          "name": "تعداد بازیکن",
+          "filter": "playercount"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "سبک بازی",
+          "value": "cardGame",
+          "valueFa": "بازی کارتی",
+          "filter": "sabk"
+        },
+        {
+          "name": "رده سنی",
+          "value": "nojavan",
+          "valueFa": "نوجوان",
+          "filter": "radeseni"
+        },
+        {
+          "name": "تعداد بازیکن",
+          "value": "four",
+          "valueFa": "چهار",
+          "filter": "playercount"
+        }
+      ],
+      "available": true,
+      "name": "بازی فکری UNO عود مدل 54 کارتی",
+      "price": 15490,
+      "offPrice": 15490,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/1040017.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 33,
+      "group": "toys",
+      "category": "fekri",
+      "specifications": [
+        {
+          "name": "سبک بازی",
+          "value": "fekriGame",
+          "valueFa": "بازی فکری",
+          "filter": "sabk"
+        },
+        {
+          "name": "رده سنی",
+          "value": "nojavan",
+          "valueFa": "نوجوان",
+          "filter": "radeseni"
+        },
+        {
+          "name": "تعداد بازیکن",
+          "value": "four",
+          "valueFa": "چهار",
+          "filter": "playercount"
+        }
+      ],
+      "available": true,
+      "name": "بازی فکری دومینو کد 9470",
+      "price": 45000,
+      "offPrice": 45000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/120429380.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 34,
+      "group": "toys",
+      "category": "puzzle",
+      "allFilters": [
+        {
+          "name": "تعداد تکه",
+          "filter": "tedadteke"
+        },
+        {
+          "name": "رده سنی",
+          "filter": "radeseni"
+        },
+        {
+          "name": "جنس",
+          "filter": "material"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "تعداد تکه",
+          "value": 12,
+          "valueFa": 12,
+          "filter": "tedadteke"
+        },
+        {
+          "name": "رده سنی",
+          "value": "nojavan",
+          "valueFa": "نوجوان",
+          "filter": "radeseni"
+        },
+        {
+          "name": "جنس",
+          "value": "mdf",
+          "valueFa": "ام دی اف",
+          "filter": "material"
+        }
+      ],
+      "available": true,
+      "name": "پازل 12 تکه محصولات امید مدل سگهای نگهبان کد MO601",
+      "price": 20000,
+      "offPrice": 20000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/0b6b3bd759be5d3e753179468d7a128259ccd961_1609858507.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 35,
+      "group": "toys",
+      "category": "puzzle",
+      "specifications": [
+        {
+          "name": "تعداد تکه",
+          "value": 1000,
+          "valueFa": 1000,
+          "filter": "tedadteke"
+        },
+        {
+          "name": "رده سنی",
+          "value": "nojavan",
+          "valueFa": "نوجوان",
+          "filter": "radeseni"
+        },
+        {
+          "name": "جنس",
+          "value": "moghava",
+          "valueFa": "مقوا",
+          "filter": "material"
+        }
+      ],
+      "available": true,
+      "name": "پازل 1000 تکه ایران طرح دهکده زیبا",
+      "price": 52900,
+      "offPrice": 52900,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/112977751.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 36,
+      "group": "toys",
+      "category": "figure",
+      "allFilters": [
+        {
+          "name": "رده سنی",
+          "filter": "radeseni"
+        },
+        {
+          "name": "جنس",
+          "filter": "material"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "رده سنی",
+          "value": "koodak",
+          "valueFa": "کودک",
+          "filter": "radeseni"
+        },
+        {
+          "name": "جنس",
+          "value": "polish",
+          "valueFa": "پولیشی",
+          "filter": "material"
+        }
+      ],
+      "available": true,
+      "name": "عروسک طرح گربه مدل قلبی ارتفاع 25 سانتی متر",
+      "price": 138000,
+      "offPrice": 138000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/3314c902ac56bf57951b4c00a3c988d0abc02cfc_1625722986.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 37,
+      "group": "toys",
+      "category": "figure",
+      "specifications": [
+        {
+          "name": "رده سنی",
+          "value": "koodak",
+          "valueFa": "کودک",
+          "filter": "radeseni"
+        },
+        {
+          "name": "جنس",
+          "value": "plastik",
+          "valueFa": "پلاستیک",
+          "filter": "material"
+        }
+      ],
+      "available": true,
+      "name": "اکشن فیگور دیزنی مدل وودی",
+      "price": 820250,
+      "offPrice": 820250,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/f0e95e84ed297b7685d8264faf4ef1ac83f8a4eb_1604098779.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 38,
+      "group": "toys",
+      "category": "speener",
+      "allFilters": [
+        {
+          "name": "مکانیزم",
+          "filter": "mekanizm"
+        },
+        {
+          "name": "سبک اسباب بازی",
+          "filter": "sabk"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "مکانیزم",
+          "value": "mekaniki",
+          "valueFa": "مکانیکی",
+          "filter": "mekanizm"
+        },
+        {
+          "name": "سبک اسباب بازی",
+          "value": "sargarmi",
+          "valueFa": "سرگرم کننده",
+          "filter": "sabk"
+        }
+      ],
+      "available": true,
+      "name": "ابزار شعبده بازی اجی مجیک کد AJ 002",
+      "price": 124000,
+      "offPrice": 115300,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/d2a08f482d83b13ade991495b3e46e2c20edda9c_1602342568.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 39,
+      "group": "toys",
+      "category": "speener",
+      "specifications": [
+        {
+          "name": "مکانیزم",
+          "value": "mekaniki",
+          "valueFa": "مکانیکی",
+          "filter": "mekanizm"
+        },
+        {
+          "name": "سبک اسباب بازی",
+          "value": "sargarmi",
+          "valueFa": "سرگرم کننده",
+          "filter": "sabk"
+        }
+      ],
+      "available": true,
+      "name": "خمیر ژل بازی فانی ژل بازی مدل BB400",
+      "price": 21400,
+      "offPrice": 13500,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/120820511.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 40,
+      "group": "toys",
+      "category": "gun",
+      "allFilters": [
+        {
+          "name": "مدل اسلحه",
+          "filter": "gunType"
+        },
+        {
+          "name": "مکانیزم",
+          "filter": "mekanizm"
+        },
+        {
+          "name": "رده سنی",
+          "filter": "radeseni"
+        },
+        {
+          "name": "لیزر",
+          "filter": "laser"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "مدل اسلحه",
+          "value": "kolt",
+          "valueFa": "کلت",
+          "filter": "gunType"
+        },
+        {
+          "name": "مکانیزم",
+          "value": "badi",
+          "valueFa": "بادی",
+          "filter": "mekanizm"
+        },
+        {
+          "name": "رده سنی",
+          "value": "nojavan",
+          "valueFa": "نوجوان",
+          "filter": "radeseni"
+        }
+      ],
+      "available": true,
+      "name": "تفنگ بازی مدل کلت P99",
+      "price": 88000,
+      "offPrice": 88000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/d8982cf93cfce1a95e059103776975f26c95db05_1621461187.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 41,
+      "group": "toys",
+      "category": "gun",
+      "specifications": [
+        {
+          "name": "مدل اسلحه",
+          "value": "tofang",
+          "valueFa": "تفنگ",
+          "filter": "gunType"
+        },
+        {
+          "name": "مکانیزم",
+          "value": "badi",
+          "valueFa": "بادی",
+          "filter": "mekanizm"
+        },
+        {
+          "name": "رده سنی",
+          "value": "nojavan",
+          "valueFa": "نوجوان",
+          "filter": "radeseni"
+        },
+        {
+          "name": "لیزر",
+          "value": "yes",
+          "valueFa": "دارد",
+          "filter": "laser"
+        }
+      ],
+      "available": true,
+      "name": "تفنگ اسباب بازی مدل Pressure Transmitter",
+      "price": 730000,
+      "offPrice": 730000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/705290.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 42,
+      "group": "health",
+      "category": "arayeshi",
+      "allFilters": [
+        {
+          "name": "حجم",
+          "filter": "hajm"
+        },
+        {
+          "name": "میزان قدرت حفظ حالت مو",
+          "filter": "fixmoo"
+        },
+        {
+          "name": "ترکیبات",
+          "filter": "tarkibat"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "حجم",
+          "value": 500,
+          "valueFa": 500,
+          "unit": "میلی لیتر",
+          "filter": "hajm"
+        },
+        {
+          "name": "میزان قدرت حفظ حالت مو",
+          "value": "four",
+          "valueFa": "چهار",
+          "filter": "fixmoo"
+        }
+      ],
+      "available": true,
+      "name": "اسپری حالت دهنده مو کاسپین مدل 02 حجم 500 میلی لیتر",
+      "price": 55500,
+      "offPrice": 49950,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/b3051187873c182d73bd6882cc04ad3a3bb7c089_1637584844.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 43,
+      "group": "health",
+      "category": "arayeshi",
+      "specifications": [
+        {
+          "name": "ترکیبات",
+          "value": "noparaben",
+          "valueFa": "بدون پارابن",
+          "filter": "tarkibat"
+        }
+      ],
+      "available": true,
+      "name": "ریمل حجم دهنده ریمل لندن مدل Scandal Eyes Lycra Flex",
+      "price": 51900,
+      "offPrice": 51900,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/112054987.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 43,
+      "group": "health",
+      "category": "behdashti",
+      "allFilters": [
+        {
+          "name": "حجم",
+          "filter": "hajm"
+        },
+        {
+          "name": "مناسب برای",
+          "filter": "monaseb"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "حجم",
+          "value": 400,
+          "valueFa": 400,
+          "unit": "میلی لیتر",
+          "filter": "hajm"
+        }
+      ],
+      "available": true,
+      "name": "شامپو و نرم کننده مو بانتا کلین مدل عسل کد H01 حجم 400 میلی لیتر",
+      "price": 35900,
+      "offPrice": 35900,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/3bde1efa90fd73788de8c394c2155436e5cc259f_1637129947.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 44,
+      "group": "health",
+      "category": "behdashti",
+      "specifications": [
+        {
+          "name": "حجم",
+          "value": 1000,
+          "valueFa": 1000,
+          "unit": "میلی لیتر",
+          "filter": "hajm"
+        },
+        {
+          "name": "مناسب برای",
+          "value": "menwomen",
+          "valueFa": "آقایان و بانوان",
+          "filter": "monaseb"
+        }
+      ],
+      "available": true,
+      "name": "شامپو موهای معمولی شبنم مقدار 1000 گرم 400 میلی لیتر",
+      "price": 26500,
+      "offPrice": 26500,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/2537316.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 45,
+      "group": "health",
+      "category": "gold",
+      "allFilters": [
+        {
+          "name": "عیار",
+          "filter": "ayar"
+        },
+        {
+          "name": "نحوه اتصال",
+          "filter": "nahveetesal"
+        },
+        {
+          "name": "طرح کالا",
+          "filter": "tarh"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "عیار",
+          "value": 18,
+          "valueFa": 18,
+          "unit": "عیار",
+          "filter": "ayar"
+        },
+        {
+          "name": "نحوه اتصال",
+          "value": "halghe",
+          "valueFa": "حلقه ای",
+          "filter": "nahveetesal"
+        },
+        {
+          "name": "طرح کالا",
+          "value": "ghalb",
+          "valueFa": "قلب آویز",
+          "filter": "tarh"
+        }
+      ],
+      "available": true,
+      "name": "گوشواره طلا 18 عیار زنانه ریسه گالری مدل 3032",
+      "price": 1999000,
+      "offPrice": 1489000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/466379277e9cd32908c9f0d2ab1872db3c5a97e2_1605937490.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 46,
+      "group": "health",
+      "category": "gold",
+      "specifications": [
+        {
+          "name": "عیار",
+          "value": 18,
+          "valueFa": 18,
+          "unit": "عیار",
+          "filter": "ayar"
+        },
+        {
+          "name": "نحوه اتصال",
+          "value": "gereh",
+          "valueFa": "گره ای",
+          "filter": "nahveetesal"
+        }
+      ],
+      "available": true,
+      "name": "دستبند طلا 18 عیار زنانه ریسه گالری کد H1176",
+      "price": 689000,
+      "offPrice": 359000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/113765857.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 47,
+      "group": "book",
+      "category": "ketab-chapi",
+      "allFilters": [
+        {
+          "name": "قطع",
+          "filter": "ghat"
+        },
+        {
+          "name": "نوع جلد",
+          "filter": "jeldType"
+        },
+        {
+          "name": "نوع کاغذ",
+          "filter": "paperType"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "قطع",
+          "value": "raghai",
+          "valueFa": "رقعی",
+          "filter": "ghat"
+        },
+        {
+          "name": "نوع جلد",
+          "value": "shoomiz",
+          "valueFa": "شومیز",
+          "filter": "jeldType"
+        },
+        {
+          "name": "نوع کاغذ",
+          "value": "tahrir",
+          "valueFa": "تحریر",
+          "filter": "paperType"
+        }
+      ],
+      "available": true,
+      "name": "کتاب اثر مرکب اثر دارن هاردی انتشارات نگین ایران",
+      "price": 75000,
+      "offPrice": 19000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/16662a12981547ca7534b6e5fa4273dc76d28e08_1620120646.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 48,
+      "group": "book",
+      "category": "ketab-chapi",
+      "specifications": [
+        {
+          "name": "قطع",
+          "value": "raghai",
+          "valueFa": "رقعی",
+          "filter": "ghat"
+        },
+        {
+          "name": "نوع جلد",
+          "value": "shoomiz",
+          "valueFa": "شومیز",
+          "filter": "jeldType"
+        },
+        {
+          "name": "نوع کاغذ",
+          "value": "zard",
+          "valueFa": "زرد",
+          "filter": "paperType"
+        }
+      ],
+      "available": true,
+      "name": "کتاب عادت های اتمی اثر جیمز کلیر از انتشارات تیموری",
+      "price": 145000,
+      "offPrice": 29500,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/0b9a390ae3d3f36493fa71a9d950858976708a91_1641205020.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 49,
+      "group": "book",
+      "category": "ketab-soti",
+      "allFilters": [
+        {
+          "name": "مدت زمان",
+          "filter": "modat"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "مدت زمان",
+          "value": 345,
+          "valueFa": 345,
+          "filter": "modat"
+        }
+      ],
+      "available": true,
+      "name": "کتاب صوتی بیشعوری اثر خاویر کرمنت",
+      "price": 31500,
+      "offPrice": 31500,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/1580839.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 50,
+      "group": "book",
+      "category": "ketab-soti",
+      "specifications": [
+        {
+          "name": "مدت زمان",
+          "value": 470,
+          "valueFa": 470,
+          "filter": "modat"
+        }
+      ],
+      "available": true,
+      "name": "کتاب صوتی درخت پرتقال اثر کارلوس فوئنتس",
+      "price": 33000,
+      "offPrice": 23200,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/2571220.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 51,
+      "group": "book",
+      "category": "majalat",
+      "allFilters": [
+        {
+          "name": "نوع جلد",
+          "filter": "jeldType"
+        },
+        {
+          "name": "نوع کاغذ",
+          "filter": "paperType"
+        },
+        {
+          "name": "زبان",
+          "filter": "lang"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "نوع جلد",
+          "value": "shoomiz",
+          "valueFa": "شومیز",
+          "filter": "jeldType"
+        },
+        {
+          "name": "نوع کاغذ",
+          "value": "gelase",
+          "valueFa": "گلاسه",
+          "filter": "paperType"
+        },
+        {
+          "name": "زبان",
+          "value": "en",
+          "valueFa": "انگلیسی",
+          "filter": "lang"
+        }
+      ],
+      "available": true,
+      "name": "مجله کروئلا سیاه قرمز و سفید آگوست 2021",
+      "price": 65000,
+      "offPrice": 58500,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/f187f2579e768fc5753a85f8c84ca0645600ca6a_1638971582.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 52,
+      "group": "book",
+      "category": "majalat",
+      "specifications": [
+        {
+          "name": "نوع جلد",
+          "value": "shoomiz",
+          "valueFa": "شومیز",
+          "filter": "jeldType"
+        },
+        {
+          "name": "نوع کاغذ",
+          "value": "gelase",
+          "valueFa": "گلاسه",
+          "filter": "paperType"
+        },
+        {
+          "name": "زبان",
+          "value": "fa",
+          "valueFa": "فارسی",
+          "filter": "lang"
+        }
+      ],
+      "available": true,
+      "name": "مجله گزارش سال 1399 دیجی کالا",
+      "price": 100000,
+      "offPrice": 100000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/47cf3b5680c866a6d8f9f32caef4e4bcefbeccbf_1636886613.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 53,
+      "group": "car",
+      "category": "janebi",
+      "allFilters": [
+        {
+          "name": "اندازه صفحه نمایش",
+          "filter": "displaySize",
+          "unit": "اینچ"
+        },
+        {
+          "name": "جنس",
+          "filter": "jens"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "ابعاد",
+          "valueFa": "200*150*50",
+          "unit": "سانتی متر"
+        },
+        {
+          "name": "اندازه صفحه نمایش",
+          "value": 9,
+          "valueFa": 9,
+          "unit": "اینچ",
+          "filter": "displaySize"
+        },
+        {
+          "name": "اقلام همراه کالا",
+          "valueFa": "رادیو"
+        }
+      ],
+      "available": true,
+      "name": "پخش کننده خودرو مدل مانیتور 206",
+      "price": 2950000,
+      "offPrice": 2950000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/6dd47a6739a07251fe2fc9224672e2c4eb131283_1612213439.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 54,
+      "group": "car",
+      "category": "janebi",
+      "specifications": [
+        {
+          "name": "جنس کالا",
+          "value": "nano",
+          "valueFa": "الیاف نانو",
+          "filter": "jens"
+        },
+        {
+          "name": "ویژگی های چادر",
+          "valueFa": "کاملا ضدآب"
+        }
+      ],
+      "available": true,
+      "name": "چادر خودرو رویال اسپرت مدل BEIE مناسب برای پژو پارس",
+      "price": 590000,
+      "offPrice": 510000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/610759f7eb7b316bd69a84eaef722c47cc7b5e45_1623509047.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 55,
+      "group": "car",
+      "category": "yadaki",
+      "allFilters": [
+        {
+          "name": "حداکثر ظرفیت",
+          "filter": "maxTavan"
+        },
+        {
+          "name": "مدل لامپ",
+          "filter": "lightModel"
+        },
+        {
+          "name": "نوع لامپ",
+          "filter": "lightType"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "حداکثر ظرفیت",
+          "value": 10,
+          "valueFa": 10,
+          "filter": "maxTavan"
+        },
+        {
+          "name": "ارتفاع درحالت باز شده",
+          "valueFa": 41.5,
+          "unit": "سانتی متر"
+        },
+        {
+          "name": "ارتفاع درحالت جم شده",
+          "valueFa": 21,
+          "unit": "سانتی متر"
+        }
+      ],
+      "available": true,
+      "name": "جک خودرو مدل HJ کد 10",
+      "price": 575960,
+      "offPrice": 575960,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/120999374.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 56,
+      "group": "car",
+      "category": "yadaki",
+      "specifications": [
+        {
+          "name": "مدل لامپ",
+          "value": "H4",
+          "valueFa": "H4",
+          "filter": "lightModel"
+        },
+        {
+          "name": "نوع لامپ",
+          "value": "COB",
+          "valueFa": "COB",
+          "filter": "lightType"
+        },
+        {
+          "name": "ویژگی های لامپ",
+          "valueFa": "مقاوم در برابر آب"
+        }
+      ],
+      "available": true,
+      "name": "هدلایت لامپ خودرو D9 مدل H4 بسته ۲ عددی",
+      "price": 450000,
+      "offPrice": 350000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/111171990.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 57,
+      "group": "car",
+      "category": "masrafi",
+      "allFilters": [
+        {
+          "name": "اندازه رینگ",
+          "filter": "ringSize"
+        },
+        {
+          "name": "پهنا",
+          "filter": "pahna"
+        },
+        {
+          "name": "فاق",
+          "filter": "fagh"
+        },
+        {
+          "name": "مناسب برای خودرو",
+          "filter": "monaseb"
+        }
+      ],
+      "specifications": [
+        {
+          "name": "اندازه رینگ",
+          "value": 16,
+          "valueFa": 16,
+          "unit": "اینچ",
+          "filter": "ringSize"
+        },
+        {
+          "name": "پهنا",
+          "value": 205,
+          "valueFa": 205,
+          "unit": "میلی متر",
+          "filter": "pahna"
+        },
+        {
+          "name": "فاق",
+          "value": 55,
+          "valueFa": 55,
+          "unit": "درصد پهنا",
+          "filter": "fagh"
+        },
+        {
+          "name": "ویژگی های لاستیک",
+          "valueFa": "تایر تیوبلس با تکنولوژی رادیال"
+        }
+      ],
+      "available": true,
+      "name": "لاستیک خودرو هانکوک مدل Ventus Prime3 K125 سایز 205/55R16 - دو حلقه",
+      "price": 4800000,
+      "offPrice": 4800000,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/7142a3f5c219b586deb1b270a5c1119c0dd7496f_1640690535.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+    },
+    {
+      "id": 58,
+      "group": "car",
+      "category": "masrafi",
+      "specifications": [
+        {
+          "name": "مناسب برای خودرو",
+          "value": "pride",
+          "valueFa": "پراید",
+          "filter": "monaseb"
+        },
+        {
+          "name": "ویژگی های فیلتر",
+          "valueFa": "دایره ای شکل"
+        }
+      ],
+      "available": true,
+      "name": "فیلتر روغن سرکان کد SF 7735 مناسب برای پراید",
+      "price": 42900,
+      "offPrice": 42900,
+      "image": "https://dkstatics-public.digikala.com/digikala-products/0dc0019b2ea1f066146f75294f01a2662a8b9b72_1625296358.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
     }
   ],
   "users": [
@@ -877,14 +2572,6 @@
       "password": "@Aa12345",
       "passwordConfirm": "@Aa12345",
       "id": 446
-    },
-    {
-      "name": "asdas",
-      "email": "ada@asd.asd",
-      "phone": "09111111112",
-      "password": "@Aa12345",
-      "passwordConfirm": "@Aa12345",
-      "id": 500
     }
   ]
 }
