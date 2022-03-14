@@ -12,7 +12,8 @@ import { useSelector } from "react-redux";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const [filteredProducts, setFilterProducts] = useState(null);
+  const [filteredProducts, setFilteredProducts] = useState(null);
+  const [isFilter, setIsFilter] = useState(false);
   const navigate = useNavigate();
   const initial = {
     digital: false,
@@ -74,10 +75,34 @@ const Header = () => {
       const filtered = allProducts.filter((product) =>
         product.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
-      filtered.length ? setFilterProducts(filtered) : setFilterProducts([""]);
+      filtered.length
+        ? setFilteredProducts(filtered)
+        : setFilteredProducts(["false"]);
     } else {
-      setFilterProducts(null);
+      setFilteredProducts(null);
     }
+  };
+
+  const filteredProduct = (product) => {
+    const clickHandler = () => {
+      changeRoute(`${product.group}/${product.category}/${product.id}`);
+      setIsFilter(false);
+      setSearchValue("");
+      setFilteredProducts(null);
+    };
+
+    return (
+      <div
+        key={product.id}
+        className={style.filteredProduct}
+        onClick={clickHandler}
+      >
+        <div className={style.imgContainer}>
+          <img src={product.image} alt={product.name} />
+        </div>
+        <span className={style.filteredName}>{product.name}</span>
+      </div>
+    );
   };
 
   return (
@@ -86,13 +111,30 @@ const Header = () => {
         <div className={style.topHeader}>
           <div className={style.topHeaders}>
             <span className={style.title}>فروشگاه</span>
-            <div className={style.searchBox}>
+            <div
+              className={`${style.backdrop} ${isFilter && style.backdropOn}`}
+              onClick={() => setIsFilter(false)}
+            ></div>
+            <div className={`${style.searchBox} ${isFilter && style.searchOn}`}>
               <input
                 type="text"
                 value={searchValue}
+                onFocus={() => setIsFilter(true)}
                 placeholder="جستجو ..."
                 onChange={searchProductsHandler}
               ></input>
+              <div
+                className={`${style.filteredBox} ${
+                  isFilter && style.filteredBoxOn
+                }`}
+              >
+                {filteredProducts && filteredProducts[0] === "false" ? (
+                  <span>محصولی وجود ندارد</span>
+                ) : (
+                  filteredProducts &&
+                  filteredProducts.map((p) => filteredProduct(p))
+                )}
+              </div>
             </div>
           </div>
           <div className={style.bottomHeader}>
