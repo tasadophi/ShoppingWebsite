@@ -129,7 +129,12 @@ const Header = () => {
                 }`}
               >
                 {filteredProducts && filteredProducts[0] === "false" ? (
-                  <span>محصولی وجود ندارد</span>
+                  <span
+                    className={style.noProducts}
+                    onClick={() => setIsFilter(false)}
+                  >
+                    محصولی وجود ندارد
+                  </span>
                 ) : (
                   filteredProducts &&
                   filteredProducts.map((p) => filteredProduct(p))

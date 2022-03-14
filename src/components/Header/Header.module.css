@@ -132,6 +132,14 @@
   height: 100%;
 }
 
+.noProducts {
+  font-size: 1.8rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .headerMenu {
   gap: 1.5rem;
   display: block;
