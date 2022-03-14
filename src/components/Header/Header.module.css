@@ -69,6 +69,8 @@
   background-color: #fff;
   max-height: 30rem;
   overflow: auto;
+  width: 80vw;
+  margin-right: 3rem;
 }
 
 .searchBox input {
@@ -284,6 +286,11 @@
 @media screen and (min-width: 1024px) {
   .topHeader {
     flex-direction: row;
+  }
+
+  .searchOn {
+    width: 40vw;
+    margin-right: 10rem;
   }
 
   .menuBtn,
