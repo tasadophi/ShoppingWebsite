@@ -11,6 +11,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+  const [filteredProducts, setFilterProducts] = useState(null);
   const navigate = useNavigate();
   const initial = {
     digital: false,
@@ -22,7 +24,7 @@ const Header = () => {
   };
   const [showSub, setShowSub] = useState(initial);
   const userId = JSON.parse(localStorage.getItem("loggedIn"));
-  const { cart } = useSelector((state) => state.products);
+  const { cart, allProducts } = useSelector((state) => state.products);
   const cartCount = cart.reduce((acc, curr) => {
     return acc + curr.count;
   }, 0);
@@ -65,6 +67,19 @@ const Header = () => {
     document.querySelector("body").style = null;
   };
 
+  const searchProductsHandler = (e) => {
+    const searchQuery = e.target.value;
+    setSearchValue(searchQuery);
+    if (searchQuery) {
+      const filtered = allProducts.filter((product) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      filtered.length ? setFilterProducts(filtered) : setFilterProducts([""]);
+    } else {
+      setFilterProducts(null);
+    }
+  };
+
   return (
     <header className={style.mainHeader}>
       <div className="container">
@@ -72,7 +87,12 @@ const Header = () => {
           <div className={style.topHeaders}>
             <span className={style.title}>فروشگاه</span>
             <div className={style.searchBox}>
-              <input type="text" placeholder="جستجو ..."></input>
+              <input
+                type="text"
+                value={searchValue}
+                placeholder="جستجو ..."
+                onChange={searchProductsHandler}
+              ></input>
             </div>
           </div>
           <div className={style.bottomHeader}>
