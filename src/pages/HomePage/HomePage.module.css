@@ -1,0 +1,45 @@
+.homePage {
+  padding: 1rem;
+}
+
+.homePageContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 32rem));
+  gap: 3rem;
+  place-content: center;
+}
+
+.groupBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.groupBox:hover {
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.imgContainer {
+  width: 15rem;
+  height: auto;
+}
+
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
