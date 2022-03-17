@@ -40,7 +40,7 @@ const Profile = () => {
 
   if (userData) {
     return (
-      <section className={style.mainContainer}>
+      <section className={`footerWrapper ${style.mainContainer}`}>
         <Modal showModal={showModal} setShowModal={setShowModal}>
           <span>آیا واقعا قصد خروج دارید؟</span>
           <div className={style.btnBox}>

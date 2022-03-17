@@ -89,7 +89,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className={style.mainFormContainer}>
+    <div className={`footerWrapper ${style.mainFormContainer}`}>
       <Modal showModal={showModal} setShowModal={setShowModal}>
         <span>{error}</span>
         <button

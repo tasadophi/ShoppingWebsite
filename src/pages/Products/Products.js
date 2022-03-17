@@ -231,7 +231,7 @@ const Products = () => {
       category ? product.category === category : product.group === group
     );
     return (
-      <section className={style.products}>
+      <section className={`footerWrapper ${style.products}`}>
         <div
           className={`container ${style.productsDesktop} ${
             showFilters && style.backdrop

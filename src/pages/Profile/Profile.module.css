@@ -1,6 +1,5 @@
 .mainContainer {
   display: flex;
-  justify-content: center;
   margin: 2rem auto;
   font-size: 2rem;
   gap: 1rem;

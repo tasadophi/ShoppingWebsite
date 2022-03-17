@@ -58,7 +58,7 @@ const Product = () => {
       );
     };
     return (
-      <section className={style.product}>
+      <section className={`footerWrapper ${style.product}`}>
         <div className="container">
           <div className={style.main}>
             <div className={style.imgContainer}>
