@@ -1,0 +1,8 @@
+.mainFooter {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  border-top: 2px solid #ccc;
+}
+
