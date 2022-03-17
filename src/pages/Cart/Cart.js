@@ -113,12 +113,14 @@ const Cart = () => {
 
   const cartEmptyPage = () => {
     return (
-      <div className={`container ${style.cartEmptyContainer}`}>
-        <div>
-          <span>سبد خرید شما خالی است!</span>
-          <Link to="/">رفتن به صفحه اصلی</Link>
+      <section className="footerWrapper">
+        <div className={`container ${style.cartEmptyContainer}`}>
+          <div>
+            <span>سبد خرید شما خالی است!</span>
+            <Link to="/">رفتن به صفحه اصلی</Link>
+          </div>
         </div>
-      </div>
+      </section>
     );
   };
   return <>{cart.length ? cartPage() : cartEmptyPage()}</>;
