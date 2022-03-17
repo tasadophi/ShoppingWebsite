@@ -13,6 +13,7 @@ import Profile from "./pages/Profile/Profile";
 import Cart from "./pages/Cart/Cart";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   const { cart } = useSelector((state) => state.products);
@@ -43,11 +44,13 @@ function App() {
             path="/products/:group/:category/:productId"
             element={<Product />}
           />
+          <Route path="/products" element={<NotFound />} />
         </Route>
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer rtl={true} theme="colored" style={styles} />
     </Layout>
