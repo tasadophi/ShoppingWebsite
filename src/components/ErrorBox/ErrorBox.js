@@ -4,7 +4,7 @@ import style from "./Error.module.css";
 const ErrorBox = ({ error }) => {
   const dispatch = useDispatch();
   return (
-    <div className={style.errorBox}>
+    <div className={`footerWrapper ${style.errorBox}`}>
       <div className="container">
         <p>
           {error}
