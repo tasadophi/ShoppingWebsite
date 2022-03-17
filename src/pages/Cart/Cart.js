@@ -91,7 +91,7 @@ const Cart = () => {
 
   const cartPage = () => {
     return (
-      <section>
+      <section className="footerWrapper">
         <div className={`container ${style.cartContainer}`}>
           <aside className={style.sidebar}>
             <div className={style.summury}>
