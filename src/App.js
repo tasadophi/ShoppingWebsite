@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Products from "./pages/Products/Products";
 import Layout from "./Layout/Layout";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 import Product from "./pages/Product/Product";
 import { getDataApi, initCart } from "./redux/productsSlice";
 import SignUpForm from "./pages/SignUpForm/SignUpForm";
