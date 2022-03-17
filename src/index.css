@@ -29,4 +29,5 @@ body {
 
 .footerWrapper {
   min-height: calc(100vh - 6rem);
+  margin-bottom: 2rem;
 }
