@@ -1,0 +1,55 @@
+.notFoundContainer,
+.notFoundDesc {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.notFoundContainer {
+  margin-top: 3rem;
+  min-height: calc(100vh - 20rem);
+}
+
+.notFoundDesc a {
+  padding: 1.7rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #15803d;
+  background-color: #fff;
+  border: 1px solid #15803d !important;
+  font-size: 2rem;
+}
+
+.notFoundDesc a:hover {
+  background-color: #15803d;
+  color: #bbf7d0;
+}
+
+.notFoundDigits {
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 5px;
+}
+
+.notFoundDigits span {
+  background-color: #bbf7d0;
+  color: #15803d;
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+.notFoundDesc {
+  font-size: 3rem;
+}
