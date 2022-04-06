@@ -21,6 +21,9 @@ html {
 body {
   font-family: "vazir";
 }
+button {
+  font-family: "vazir";
+}
 
 .container {
   max-width: 1170px;
