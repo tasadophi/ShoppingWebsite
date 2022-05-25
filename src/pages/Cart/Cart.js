@@ -61,14 +61,11 @@ const Cart = () => {
 
     return (
       <div className={style.cartItem}>
-        <div className={style.cartItemActions}>
-          <span className={style.removeBtn} onClick={remove}>
-            {cartItem.count > 1 ? <BiMinus /> : <BiTrash />}
-          </span>
-          <span className={style.count}>{cartItem.count}</span>
-          <span className={style.addBtn} onClick={add}>
-            <BiPlus />
-          </span>
+        <div className={style.cartItemDetails}>
+          <span className={style.cartItemName}>{cartItem.name}</span>
+          <div className={style.imgContainer}>
+            <img src={cartItem.image} alt={cartItem.name} />
+          </div>
         </div>
         <div className={style.cartPrice}>
           {cartItem.offPrice === cartItem.price ? (
@@ -79,11 +76,14 @@ const Cart = () => {
             offPrice(cartItem)
           )}
         </div>
-        <div className={style.cartItemDetails}>
-          <span className={style.cartItemName}>{cartItem.name}</span>
-          <div className={style.imgContainer}>
-            <img src={cartItem.image} alt={cartItem.name} />
-          </div>
+        <div className={style.cartItemActions}>
+          <span className={style.removeBtn} onClick={remove}>
+            {cartItem.count > 1 ? <BiMinus /> : <BiTrash />}
+          </span>
+          <span className={style.count}>{cartItem.count}</span>
+          <span className={style.addBtn} onClick={add}>
+            <BiPlus />
+          </span>
         </div>
       </div>
     );
@@ -93,6 +93,11 @@ const Cart = () => {
     return (
       <section className="footerWrapper">
         <div className={`container ${style.cartContainer}`}>
+          <div className={style.cartItems}>
+            {cart.map((cartItem) => (
+              <CartItem key={cartItem.id} cartItem={cartItem} />
+            ))}
+          </div>
           <aside className={style.sidebar}>
             <div className={style.summury}>
               <span>جمع کل سبد خرید: {sepratePrice(totalCartPrice)}</span>
@@ -101,11 +106,6 @@ const Cart = () => {
             <span>مبلغ قابل پرداخت: {sepratePrice(payPrice)}</span>
             <button className={style.btn}>پرداخت نهایی</button>
           </aside>
-          <div className={style.cartItems}>
-            {cart.map((cartItem) => (
-              <CartItem key={cartItem.id} cartItem={cartItem} />
-            ))}
-          </div>
         </div>
       </section>
     );
