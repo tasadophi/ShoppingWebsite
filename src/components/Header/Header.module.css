@@ -28,6 +28,7 @@
   justify-content: space-between;
   display: flex;
   align-items: center;
+  margin-top: 1rem;
 }
 
 .title {
@@ -305,6 +306,10 @@
     padding: 0;
     overflow: visible;
     margin-top: 1.4rem;
+  }
+
+  .bottomHeader {
+    margin-top: 0;
   }
 
   .menuItem:hover::after {
